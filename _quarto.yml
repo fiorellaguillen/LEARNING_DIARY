@@ -1,9 +1,10 @@
 project:
   type: book
+  output-dir: docs
 
 book:
   title: "LEARNING_DIARY"
-  author: "Norah Jones"
+  author: "Fiorella Guillen"
   date: "27/1/2025"
   chapters:
     - index.qmd

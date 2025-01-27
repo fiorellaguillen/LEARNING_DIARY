@@ -1,0 +1,23 @@
+project:
+  type: book
+
+book:
+  title: "LEARNING_DIARY"
+  author: "Norah Jones"
+  date: "27/1/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

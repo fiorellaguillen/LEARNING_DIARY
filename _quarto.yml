@@ -3,14 +3,13 @@ project:
   output-dir: docs
 
 book:
-  title: "LEARNING_DIARY"
+  title: "CASA0023 Learning Diary"
   author: "Fiorella Guillen"
-  date: "27/1/2025"
+  date: "27/01/2025"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - week2.qmd
+    - W1_Introduction.qmd
+    - W2_Portfolio.qmd
     - references.qmd
 
 bibliography: references.bib

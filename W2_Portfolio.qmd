@@ -1,0 +1,13 @@
+---
+title: "Portfolio tools: Xaringan and Quarto"
+format: html
+---
+
+# Week 2
+
+```{r}
+#| echo: false
+#Insert presentation
+
+xaringanExtra::embed_xaringan(url = "https://fiorellaguillen.github.io/CASA023-W2-PRESENTATION/", ratio = "16:9")
+```

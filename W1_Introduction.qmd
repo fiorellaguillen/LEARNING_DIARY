@@ -3,4 +3,14 @@ title: "An Introduction to Remote Sensing"
 format: html
 ---
 
-# Week 1
+## **Summary**
+
+This week's lecture focused on the foundations of Earth Observation (EO) and Remote Sensing. From all the contents of the class, I will focus, on this summary, on the differences between two main sensors: Landsat and Sentinel. This comparison will draw on some of the contents of the lecture, like types of sensors, resolutions, spectral bands, and applications.
+
+\*Pending to upload mind map
+
+## **Applications**
+
+Considering that this week's summary was focused on comparing Landsat and Sentinel sensors, I found appropriate to dedicate a part of this sub chapter to a paper that compares both's imagery applied to analyse Burn Severity Mapping in Western North America. This paper by Howe et al (2022) analysed 26 fires in western North America, and found that "Sentinel generally performed as well or better than Landsat for four spectral indices of burn severity", also that Sentinel's finer spatial resolution helps to identify fine-scale fire effects and therefore have a more precise identification of spatial patterns of fires and burned areas.
+
+## **Reflections**

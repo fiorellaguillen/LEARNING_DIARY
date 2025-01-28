@@ -14,7 +14,7 @@
     "href": "W1_Introduction.html",
     "title": "2  An Introduction to Remote Sensing",
     "section": "",
-    "text": "3 An Introduction to Remote Sensing",
+    "text": "2.1 Summary\nThis week’s lecture focused on the foundations of Earth Observation (EO) and Remote Sensing. From all the contents of the class, I will focus, on this summary, on the differences between two main sensors: Landsat and Sentinel. This comparison will draw on some of the contents of the lecture, like types of sensors, resolutions, spectral bands, and applications.\n*Pending to upload mind map",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
     ]
@@ -43,8 +43,8 @@
     "objectID": "W1_Introduction.html#applications",
     "href": "W1_Introduction.html#applications",
     "title": "2  An Introduction to Remote Sensing",
-    "section": "3.2 Applications",
-    "text": "3.2 Applications\nConsidering that this week’s summary was focused on comparing Landsat and Sentinel sensors, I found appropriate to dedicate a part of this sub chapter to a paper that compares both’s imagery applied to analyse Burn Severity Mapping in Western North America. This paper by Howe et al (2022) analysed 26 fires in western North America, and found that “Sentinel generally performed as well or better than Landsat for four spectral indices of burn severity”, also that Sentinel’s finer spatial resolution helps to identify fine-scale fire effects and therefore have a more precise identification of spatial patterns of fires and burned areas.",
+    "section": "2.2 Applications",
+    "text": "2.2 Applications\nConsidering that this week’s summary was focused on comparing Landsat and Sentinel sensors, I found appropriate to dedicate a part of this sub chapter to a paper that compares both’s imagery applied to analyse Burn Severity Mapping in Western North America. This paper by Howe et al (2022) analysed 26 fires in western North America, and found that “Sentinel generally performed as well or better than Landsat for four spectral indices of burn severity”, also that Sentinel’s finer spatial resolution helps to identify fine-scale fire effects and therefore have a more precise identification of spatial patterns of fires and burned areas.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
     ]
@@ -53,8 +53,8 @@
     "objectID": "W1_Introduction.html#reflections",
     "href": "W1_Introduction.html#reflections",
     "title": "2  An Introduction to Remote Sensing",
-    "section": "3.3 Reflections",
-    "text": "3.3 Reflections",
+    "section": "2.3 Reflections",
+    "text": "2.3 Reflections",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
     ]

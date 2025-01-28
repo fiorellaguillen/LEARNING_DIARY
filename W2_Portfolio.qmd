@@ -3,7 +3,7 @@ title: "Portfolio tools: Xaringan and Quarto"
 format: html
 ---
 
-# Week 2
+This week we explored how tools like Xaringan and Quarto can be used to have reproducible presentations and documents, useful for data science projects. As an exercise, I have developed this book using Quarto and a presentation on the Sentinel -2 satellite using Xaringan, which you can see here:
 
 ```{r}
 #| echo: false
@@ -11,3 +11,5 @@ format: html
 
 xaringanExtra::embed_xaringan(url = "https://fiorellaguillen.github.io/CASA023-W2-PRESENTATION/", ratio = "16:9")
 ```
+
+As a reflection on this exercise, I found that learning how to use these tools, specially Xaringan, was quite challenging, and probably not the best option for a simple presentation, but could be really useful when used to display code or data through tables for example, or when using some of the interactive tools that XaringanExtra has.

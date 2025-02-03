@@ -10,6 +10,7 @@ book:
     - index.qmd
     - W1_Introduction.qmd
     - W2_Portfolio.qmd
+    - W3_RemoteSensingData.qmd
     - references.qmd
 
 bibliography: references.bib

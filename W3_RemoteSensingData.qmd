@@ -5,6 +5,16 @@ format: html
 
 ## **Summary**
 
+In order to move forward on more advanced topics, I considered useful to have a brief overview of main terminology used in Earth Observation mentioned during this week's lecture.
+
+First, I want to explain the difference between **1. Irradiance** and **2. Radiance.** The first one, refers to any radiation reaching the Earth from the Sun. The second one, refers to any radiation leaving the Earth towards the satellite.
+
+![](images/W3_radiance and irradiance-01.jpg)
+
 ## **Applications**
 
+To be completed
+
 ## **Reflections**
+
+To be completed

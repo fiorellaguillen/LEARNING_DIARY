@@ -9,7 +9,7 @@ In order to move forward on more advanced topics, I considered useful to have a 
 
 First, I want to explain the difference between **1. Irradiance** and **2. Radiance.** The first one, refers to any radiation reaching the Earth from the Sun. The second one, refers to any radiation leaving the Earth towards the satellite.
 
-![](images/W3_radiance and irradiance-01.jpg)
+![](images/W3_radiance%20and%20irradiance-01.jpg)
 
 ## **Applications**
 

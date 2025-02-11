@@ -64,7 +64,7 @@
     "href": "W3_RemoteSensingData.html",
     "title": "4  Remote Sensing Data",
     "section": "",
-    "text": "4.1 Summary",
+    "text": "4.1 Summary\nIn order to move forward on more advanced topics, I considered useful to have a brief overview of main terminology used in Earth Observation mentioned during this week’s lecture.\nFirst, I want to explain the difference between 1. Irradiance and 2. Radiance. The first one, refers to any radiation reaching the Earth from the Sun. The second one, refers to any radiation leaving the Earth towards the satellite.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "W3_RemoteSensingData.html#applications",
     "title": "4  Remote Sensing Data",
     "section": "4.2 Applications",
-    "text": "4.2 Applications",
+    "text": "4.2 Applications\nTo be completed",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "W3_RemoteSensingData.html#reflections",
     "title": "4  Remote Sensing Data",
     "section": "4.3 Reflections",
-    "text": "4.3 Reflections",
+    "text": "4.3 Reflections\nTo be completed",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]

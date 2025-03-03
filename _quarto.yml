@@ -12,6 +12,7 @@ book:
     - W2_Portfolio.qmd
     - W3_RemoteSensingData.qmd
     - W4_Policy.qmd
+    - w6_GEE.qmd
     - references.qmd
 
 bibliography: references.bib

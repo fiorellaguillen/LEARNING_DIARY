@@ -5,7 +5,7 @@ project:
 book:
   title: "CASA0023 Learning Diary"
   author: "Fiorella Guillen"
-  date: "03/02/2025"
+  date: "03/03/2025"
   chapters:
     - index.qmd
     - W1_Introduction.qmd

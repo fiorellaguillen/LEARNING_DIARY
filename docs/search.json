@@ -118,5 +118,35 @@
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
     ]
+  },
+  {
+    "objectID": "W6_GEE.html",
+    "href": "W6_GEE.html",
+    "title": "6  Google Earth Engine",
+    "section": "",
+    "text": "6.1 Summary\nThis week, we started using Google Earth Engine (GEE) and explored its basic concepts, terminology, and processes. We learned how to access and manipulate satellite imagery (filtering, scaling values, joining images, clipping them, and performing Principal Component Analysis). So far, all these processes have demonstrated to me that GEE is a highly practical tool that simplifies satellite image analysis compared to earlier weeks when we worked with SNAP, which was more complex and time consuming.\nIn the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images.\nImage 1: PCA analysis of Iquitos, Peru\nSomething I consider worth noting is that GEE has an extensive satellite data catalog, which enables a wide range of applications, from climate studies to nighttime light analysis, with global coverage for most datasets. I find this particularly valuable because, coming from a Global South country, I know it is common to lack extensive datasets at the level of cities like London. However, GEE’s datasets cover the entire world, making it possible to conduct meaningful analyses even in data-scarce regions.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#applications",
+    "href": "W6_GEE.html#applications",
+    "title": "6  Google Earth Engine",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\nTo be completed",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#reflections",
+    "href": "W6_GEE.html#reflections",
+    "title": "6  Google Earth Engine",
+    "section": "6.3 Reflections",
+    "text": "6.3 Reflections\nTo be completed",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
   }
 ]

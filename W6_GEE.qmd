@@ -9,6 +9,10 @@ This week, we started using Google Earth Engine (GEE) and explored its basic con
 
 In the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images.
 
+*Image 1:* *PCA analysis of Iquitos, Peru*
+
+![](images/w6_iquitos.png){fig-align="center"}
+
 Something I consider worth noting is that GEE has an extensive satellite data catalog, which enables a wide range of applications, from climate studies to nighttime light analysis, with global coverage for most datasets. I find this particularly valuable because, coming from a Global South country, I know it is common to lack extensive datasets at the level of cities like London. However, GEE's datasets cover the entire world, making it possible to conduct meaningful analyses even in data-scarce regions.
 
 ## **Applications**

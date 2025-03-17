@@ -13,6 +13,8 @@ book:
     - W3_RemoteSensingData.qmd
     - W4_Policy.qmd
     - W6_GEE.qmd
+    - W7_Classification.qmd
+    - W8_Classification2.qmd
     - references.qmd
 
 bibliography: references.bib

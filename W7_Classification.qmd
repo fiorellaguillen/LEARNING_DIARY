@@ -9,13 +9,13 @@ This week we explored machine learning techniques and reviewed some remote sensi
 
 ### **Some foundational concepts:**
 
-Human learning: uses *inductive learning*, so given our experience of the world, we make inferences on the images or data we see
+**Human learning:** uses *inductive learning*, so given our experience of the world, we make inferences on the images or data we see
 
-Expert system: system that uses human knowledge as a base to solve problems. Tries to show a computer how humans reach decisions
+**Expert system:** system that uses human knowledge as a base to solve problems. Tries to show a computer how humans reach decisions
 
-Machine learning: science of computer modeling of learning process trying to replicate inductive learning
+**Machine learning:** science of computer modeling of learning process trying to replicate inductive learning
 
-Two schools: On one side, *Traditional classifiers*, they don't apply a model, they just divide the data based on a feature space. On the other side, the newer methods use *Machine Learning*.
+**Two schools:** On one side, *Traditional classifiers*, they don't apply a model, they just divide the data based on a feature space. On the other side, the newer methods use *Machine Learning*.
 
 ### **Classification methods:**
 
@@ -25,50 +25,62 @@ Two schools: On one side, *Traditional classifiers*, they don't apply a model, t
 
 **Random Forests:** Multiple decision trees working together, increasing accuracy but reducing interpretability. The model votes on the most likely classification, which makes it more reliable but harder to understand.
 
-Clustering/K-means: Similar to DBScan, it makes clusters depending on similarities with other pixels
+**Clustering/K-means:** Unsupervised method, similar to DBScan, it makes clusters depending on similarities with other pixels. Useful when categories are unknown
 
-ISODATA: extension of k-means. similar but has some inputs called hyperparameters
+**ISODATA:** Extension of K-means. Similar but has some inputs called hyperparameters
 
-Supervised:
+**Maximum likelihood, density slicing, parallelpiped** : They are more classical methods not used that much nowadays. They are supervised methods that start with a class definition, selects the training data, and applies the model to the rest of the data.
 
-Maximum likelihood, density slicing, parallelpiped : they are more classical methods not used that much nowadays. They have a class definition, selects the training data, applys the model to the rest of the data
+**Support Vector Machine SVM:** Comparable to linear regression. Instead of a line there's a hyperplane and many support vectors . This hyperplane separated two classes but allows some misclassificationndefined(soft margin). It's a two class comparison but could be replicated for multiple classes.
 
-Support Vector Machine SVM: comparable to linear regression. Intead of a line theres a hyperplane and many support vectors . This hyperplane separated two types and allows some misclassification (soft margin). its a two class comparison but could be replicatedfor multiple tipes.
-
------
+**Neural Networks & Deep Learning:** We didn’t cover these in detail, but they represent the next level, more powerful but often a "black box," meaning high accuracy at the cost of interpretability.
 
 ### Machine learning concepts:
 
-Overfitting: when the model is too calibrated for my current data that if I give it a new one it would be useless. In order to avoid it we have to check for low bias and low variance. Bias: difference between predicted value and true value. How far is the average prediction from the actual average. Variance: variability of model for a given point. Difference between accuracy with train fit and test fit. (check if it generalises well)
+**Overfitting:** When the model fits the training data too well that makes it useless for new data. In order to avoid it we have to check for *low bias* (difference between predicted value and true value) and *low variance* (difference in accuracy between train fit and test fit)
 
 ![](images/clipboard-273935459.png)
 
-Train and test data: we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)
+**Train and test data:** we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)
 
-Cross-validation: same process but changing what is your train and test data each iteration. Ensures a more robust model.
+**Cross-validation:** same process but changing what is your train and test data each iteration. It ensures a more robust model.
 
-Bootstrap sampling: sampling by replacement. it means some rows of data can be duplicated
+**Bootstrap sampling:** sampling by replacement. it means some rows of data can be duplicated
 
-Out of bag sample: rows of data not used for the random forest. It is used like a validation data set and is useful to get the out of bag error
+**Out of bag sample:** rows of data not used for the random forest. It is used like a validation dataset and is useful to get the out of bag error
 
-\*We would normally have both, train and test data and when training, have a % of train data and a % of out of the bag sample
+**Supervised classification:** The model learns from labeled training data to classify new data.
 
-Supervised classification: means i give the model training data and it will identify the patterns and assign them to previously identified ctageories
+**Unsupervised classification:** The model classifies data given a method or algorithm. It has no human input and categories are not known a priori
 
-Unsupervised: gives a method or algorith and ask to do the classification. Has no human input and categories are not known a priori
+**Hyperparameters**: control variables
 
-hyperparameters:control variables
+**Black box:** you just know if the model is good but loose interpretability. The most accurate models usually have less interpretability.
 
-Black box: you just know if the model is good but loose interpretability. The most accuracte models usually have less interpretability.
-
-Spatial autocorrelation: if the train and test data are too close, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)
-
-------------------------------------------------------------------------
+**Spatial autocorrelation:** if the train and test data are too close spatially, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)
 
 ## **Applications**
 
+Machine learning is a game-changer for remote sensing, particularly in regions where traditional data collection is difficult or expensive. Some key applications include
+
+**Urban Growth & Land Cover Classification:** Identifying informal settlements, urban expansion, or deforestation using satellite imagery. Supervised classification methods like SVM or Random Forests are commonly used for this.
+
+**Disaster Response & Environmental Monitoring:** Mapping flooded areas or monitoring forest loss. Unsupervised methods like K-means can be used to detect changes over time.
+
+**Agriculture & Food Security:** Classifying different crop types, predicting yields, or assessing drought impacts. Machine learning models can process multispectral images to detect vegetation health.
+
+**Climate Change Studies:** Analyzing glaciers, urban heat islands, or desertification trends using historical and real-time satellite data.
+
+**Data-Sparse Regions:** In Global South countries, official land-use maps may be outdated or nonexistent. Machine learning allows researchers to generate high-quality maps from remote sensing data, filling gaps in public datasets.
+
+What stood out to me is how machine learning makes it possible to analyze and classify areas that might otherwise be impossible to map manually. In cities with rapid urbanization but little official data, these techniques can provide real-time insights that governments and researchers can act upon.
+
 ## **Reflections**
 
-This week was mind blowing. I am not taking the CASA06 module so I haven't had the opportunity to see all the Machine Learning and classification options and I think this week was a great introduction/summary of most of the available options.
+This week was honestly mind blowing. Since I’m not taking the CASA06 module (which goes deeper into ML), I hadn’t really explored all the different Machine Learning and classification techniques before. This felt like a great introduction to not just to the methods themselves, but also to how they can be applied to remote sensing.
 
-Classification its super useful for data-scarce countries or cities to measure thing that are not formally mapped
+Before this, I saw Machine Learning as something super advanced and kind of out of my league. But after this class, I realized I’ve actually been using it all along (like with something as simple as Linear Regression). It’s also funny to see all the current hype around AI and ML when in reality, a lot of these models are just statistical methods that have been around for decades. That said, I also got a sense of how many more complex approaches exist, and I hope I can explore them later in more advanced applications!
+
+One key takeaway (which also ties back to something Jon mentioned in one of the first FSDS lectures) is that just because we have all these sophisticated models available doesn’t mean we should always go for the most complex one. Sometimes, a simpler model is the better choice, especially since accuracy and complexity often come at the cost of interpretability. This is particularly important in areas like policy and urban planning (which is what I’m aiming to work in), where having a clear, explainable model can be more valuable than one that’s just technically precise.
+
+Overall, this week's content was super useful, and I’m really excited to apply it in GEE, my other modules, and even my dissertation!

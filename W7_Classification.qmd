@@ -1,5 +1,5 @@
 ---
-title: "An Introduction to Remote Sensing"
+title: "Classification"
 format: html
 ---
 

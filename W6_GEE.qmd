@@ -14,7 +14,7 @@ One thing to mention is that GEE runs on JavaScript, which sounds intimidating a
 Also, some words to keep in mind when working in GEE have been summarized here:
 
 | GEE Elements        | Meaning                                             |
-|-----------------|-----------------------------------------|
+|---------------------|-----------------------------------------------------|
 | *Image*             | Raster                                              |
 | *Feature*           | Vector                                              |
 | *ImageCollection*   | A stack of images                                   |

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7&nbsp; An Introduction to Remote Sensing – CASA0023 Learning Diary</title>
+<title>7&nbsp; Classification – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W7_Classification.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W7_Classification.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -164,19 +164,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W7_Classification.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W8_Classification2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification 2</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W9_SAR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -195,7 +195,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> <strong>Summary</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#some-foundational-concepts" id="toc-some-foundational-concepts" class="nav-link" data-scroll-target="#some-foundational-concepts"><span class="header-section-number">7.1.1</span> <strong>Some foundational concepts:</strong></a></li>
+  <li><a href="#classification-methods" id="toc-classification-methods" class="nav-link" data-scroll-target="#classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods:</strong></a></li>
+  <li><a href="#machine-learning-concepts" id="toc-machine-learning-concepts" class="nav-link" data-scroll-target="#machine-learning-concepts"><span class="header-section-number">7.1.3</span> Machine learning concepts:</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> <strong>Applications</strong></a></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">7.3</span> <strong>Reflections</strong></a></li>
   </ul>
@@ -206,7 +211,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification</span></h1>
 </div>
 
 
@@ -225,23 +230,56 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> <strong>Summary</strong></h2>
-<p><strong>Week 7 notes, yet to be organized:</strong></p>
-<p>Expert learning: use human knowledge to train models</p>
-<p>Machine learning: teach computers to razonate like humans</p>
-<p>Classification: assign categories or discrete values</p>
-<p>Regression trees: continous dependent variables. Used when linear regression doesn’t fit (if it doesn’t have the 4 linear regression conditions)</p>
-<p>Random forests: use many decision trees</p>
-<p>ISODATA: same as k-means but with more hyperparameters</p>
-<p>Supervised learning:</p>
-<p>Spatial autocorrelation: if the train and test data are too close, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)</p>
-<p>Overfitting:</p>
+<p>This week we explored machine learning techniques and reviewed some remote sensing applications for them(like mapping urban sprawl, illegal logging, and land cover classification). Most of these concepts were completely new to me, so it was a great introduction to them and all the possibilities we have. Because it was my first time hearing of some of these methods, for this week’s entry I decided to structure/categorise all the methods mentioned and include what they are and how they can be useful. Also, I organized kind of a dictionary to explain some of the main concepts that were used to talk about machine learning so I can have them for future reference.</p>
+<section id="some-foundational-concepts" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="some-foundational-concepts"><span class="header-section-number">7.1.1</span> <strong>Some foundational concepts:</strong></h3>
+<p><strong>Human learning:</strong> uses <em>inductive learning</em>, so given our experience of the world, we make inferences on the images or data we see</p>
+<p><strong>Expert system:</strong> system that uses human knowledge as a base to solve problems. Tries to show a computer how humans reach decisions</p>
+<p><strong>Machine learning:</strong> science of computer modeling of learning process trying to replicate inductive learning</p>
+<p><strong>Two schools:</strong> On one side, <em>Traditional classifiers</em>, they don’t apply a model, they just divide the data based on a feature space. On the other side, the newer methods use <em>Machine Learning</em>.</p>
+</section>
+<section id="classification-methods" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods:</strong></h3>
+<p><strong>Linear Regression:</strong> Predicts continuous values by finding the best fit between independent and dependent variables.</p>
+<p><strong>Decision Trees (CART):</strong> Useful when linear regression assumptions don’t hold. Classification trees assign discrete categories, while regression trees predict continuous values by recursively splitting the data.</p>
+<p><strong>Random Forests:</strong> Multiple decision trees working together, increasing accuracy but reducing interpretability. The model votes on the most likely classification, which makes it more reliable but harder to understand.</p>
+<p><strong>Clustering/K-means:</strong> Unsupervised method, similar to DBScan, it makes clusters depending on similarities with other pixels. Useful when categories are unknown</p>
+<p><strong>ISODATA:</strong> Extension of K-means. Similar but has some inputs called hyperparameters</p>
+<p><strong>Maximum likelihood, density slicing, parallelpiped</strong> : They are more classical methods not used that much nowadays. They are supervised methods that start with a class definition, selects the training data, and applies the model to the rest of the data.</p>
+<p><strong>Support Vector Machine SVM:</strong> Comparable to linear regression. Instead of a line there’s a hyperplane and many support vectors . This hyperplane separated two classes but allows some misclassificationndefined(soft margin). It’s a two class comparison but could be replicated for multiple classes.</p>
+<p><strong>Neural Networks &amp; Deep Learning:</strong> We didn’t cover these in detail, but they represent the next level, more powerful but often a “black box,” meaning high accuracy at the cost of interpretability.</p>
+</section>
+<section id="machine-learning-concepts" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="machine-learning-concepts"><span class="header-section-number">7.1.3</span> Machine learning concepts:</h3>
+<p><strong>Overfitting:</strong> When the model fits the training data too well that makes it useless for new data. In order to avoid it we have to check for <em>low bias</em> (difference between predicted value and true value) and <em>low variance</em> (difference in accuracy between train fit and test fit)</p>
+<p><img src="images/clipboard-273935459.png" class="img-fluid"></p>
+<p><strong>Train and test data:</strong> we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)</p>
+<p><strong>Cross-validation:</strong> same process but changing what is your train and test data each iteration. It ensures a more robust model.</p>
+<p><strong>Bootstrap sampling:</strong> sampling by replacement. it means some rows of data can be duplicated</p>
+<p><strong>Out of bag sample:</strong> rows of data not used for the random forest. It is used like a validation dataset and is useful to get the out of bag error</p>
+<p><strong>Supervised classification:</strong> The model learns from labeled training data to classify new data.</p>
+<p><strong>Unsupervised classification:</strong> The model classifies data given a method or algorithm. It has no human input and categories are not known a priori</p>
+<p><strong>Hyperparameters</strong>: control variables</p>
+<p><strong>Black box:</strong> you just know if the model is good but loose interpretability. The most accurate models usually have less interpretability.</p>
+<p><strong>Spatial autocorrelation:</strong> if the train and test data are too close spatially, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)</p>
+</section>
 </section>
 <section id="applications" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> <strong>Applications</strong></h2>
+<p>Machine learning is a game-changer for remote sensing, particularly in regions where traditional data collection is difficult or expensive. Some key applications include</p>
+<p><strong>Urban Growth &amp; Land Cover Classification:</strong> Identifying informal settlements, urban expansion, or deforestation using satellite imagery. Supervised classification methods like SVM or Random Forests are commonly used for this.</p>
+<p><strong>Disaster Response &amp; Environmental Monitoring:</strong> Mapping flooded areas or monitoring forest loss. Unsupervised methods like K-means can be used to detect changes over time.</p>
+<p><strong>Agriculture &amp; Food Security:</strong> Classifying different crop types, predicting yields, or assessing drought impacts. Machine learning models can process multispectral images to detect vegetation health.</p>
+<p><strong>Climate Change Studies:</strong> Analyzing glaciers, urban heat islands, or desertification trends using historical and real-time satellite data.</p>
+<p><strong>Data-Sparse Regions:</strong> In Global South countries, official land-use maps may be outdated or nonexistent. Machine learning allows researchers to generate high-quality maps from remote sensing data, filling gaps in public datasets.</p>
+<p>What stood out to me is how machine learning makes it possible to analyze and classify areas that might otherwise be impossible to map manually. In cities with rapid urbanization but little official data, these techniques can provide real-time insights that governments and researchers can act upon.</p>
 </section>
 <section id="reflections" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">7.3</span> <strong>Reflections</strong></h2>
-<p>This week was mind blowing. I am not taking the CASA06 module so I haven’t had the opportunity to see all the Machine Learning and classification options and I think this week was a great introduction/summary of most of the available options.</p>
+<p>This week was honestly mind blowing. Since I’m not taking the CASA06 module (which goes deeper into ML), I hadn’t really explored all the different Machine Learning and classification techniques before. This felt like a great introduction to not just to the methods themselves, but also to how they can be applied to remote sensing.</p>
+<p>Before this, I saw Machine Learning as something super advanced and kind of out of my league. But after this class, I realized I’ve actually been using it all along (like with something as simple as Linear Regression). It’s also funny to see all the current hype around AI and ML when in reality, a lot of these models are just statistical methods that have been around for decades. That said, I also got a sense of how many more complex approaches exist, and I hope I can explore them later in more advanced applications!</p>
+<p>One key takeaway (which also ties back to something Jon mentioned in one of the first FSDS lectures) is that just because we have all these sophisticated models available doesn’t mean we should always go for the most complex one. Sometimes, a simpler model is the better choice, especially since accuracy and complexity often come at the cost of interpretability. This is particularly important in areas like policy and urban planning (which is what I’m aiming to work in), where having a clear, explainable model can be more valuable than one that’s just technically precise.</p>
+<p>Overall, this week’s content was super useful, and I’m really excited to apply it in GEE, my other modules, and even my dissertation!</p>
 
 
 </section>
@@ -671,8 +709,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./W8_Classification2.html" class="pagination-link" aria-label="An Introduction to Remote Sensing">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./W8_Classification2.html" class="pagination-link" aria-label="Classification 2">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Classification 2</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

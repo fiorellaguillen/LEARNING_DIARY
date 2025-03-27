@@ -1,10 +1,94 @@
 ---
-title: "An Introduction to Remote Sensing"
+title: "Classification 2"
 format: html
 ---
 
 ## **Summary**
 
+This session could be divided in two main topics. On one side (and also the one i felt was easier to understand) was continuing seeing alternatives to image classification, including some preclassified datasets like MODIS or Dynamic World. The other part (which for me was a bit difficult to understand) covered key concepts in classification accuracy assessment, cross-validation techniques, the impact of spatial autocorrelation, and spatial cross validation.
+
+For the first part, we got deeper on Dynamic World which is a open-access semisupervised model with already preprocessed data to obtain info on tree cover, built index, etc, that is continously being updated. Something interesting it that it uses Convolutional Neural Networks, which is a form of deep learning that uses a moving window for classification. Some cons would be that its not too detailed, has some inaccuracies because of using TOA reflectance and lacks interpretability.
+
+We also saw alternatives to classification techniques like:
+
+OBIA: Object based image analysis : instead of classifying cells, segments images in meaningul shape based on similarity, called superpixels and then classifies. It uses SLIC which is a method to refine classification that checks for homogenity of colors and closeness to center
+
+Subpixel analysis: recognizes that one pixel might include multiple land cover types so we could calculate the proportion of each pixel corresponding to each class. it is computed usingmatrix inversion techniques, with each fraction summing to one.
+
+Then moving to **accuracy assessment**. First of all I found this table to be the basis of all next concepts
+
+\*Graph on true positive, true negative, false positive, false negative
+
+So, there are many indexes to measure accuracy
+
+PA: Producer accuracy : true positive and false negative rate
+
+UA: User accuracy: true positive and false positive
+
+OA: Overall accuracy: true positive and true negative compared to all classifications
+
+Errors of omission: 100 - PA
+
+Errors of Comission: 100 - UA
+
+Kappa coefficient: accuracy of an image compared to the results by chance. Its use is controversial
+
+F1 measure: combines PA and UA but doesn't take in account true negatives
+
+Considerations: its not possible to maximize both producer and user accuracy at the same time.
+
+**How do we get test data for accuracy assessment?**
+
+Models need to be tested on different datasets to ensure they generalize well
+
+Basic validation splits the data into training and testing subsets
+
+Cross-validation improves reliability by repeating the process multiple times, commonly using k-fold (e.g., 10-fold) validation, where data is split into k parts and rotated between training and testing.
+
+A more extreme form, leave-one-out cross-validation, tests each data point separately, though it's rarely used in remote sensing due to high computational costs
+
+We also saw **Spatial Autocorrelation** and things to consider about it:
+
+Spatial autocorrelation means that data points close to each other are more similar than those farther apart (Tobler’s Law: "everything is related, but near things are more related").
+
+If training and test data are too close, the model sees a "sneak preview" of test data, leading to an overestimated accuracy.
+
+Traditional pixel-based accuracy assessments often suffer from this issue.
+
+**Spatial cross validation**
+
+Unlike standard cross-validation, spatial cross-validation ensures that training and test data are spatially separated.
+
+This reduces the effect of spatial autocorrelation and provides a more realistic accuracy estimate.
+
+Methods include:
+
+Object-based classification: Instead of individual pixels, entire objects (e.g., buildings or vegetation patches) are classified.
+
+Spatial partitioning: Training and test data are assigned to separate geographic areas to avoid overlap.
+
+**Some main takeaways:**
+
+Always check if spatial autocorrelation is considered in model validation; ignoring it inflates accuracy.
+
+Cross-validation improves reliability but needs spatial modifications to work well in remote sensing.
+
+Hyperparameters should be tuned using spatial cross-validation to ensure robustness.
+
+If someone presents a machine learning model using spatial data, ask if they accounted for spatial dependencies—otherwise, their accuracy might be overestimated.
+
 ## **Applications**
 
+Understanding spatial cross-validation is crucial for improving model reliability in Earth observation, remote sensing, and spatial machine learning. In practical applications:
+
+**Earth Observation & Remote Sensing**: Ensuring classification models for land cover or environmental monitoring are robust and not overly optimistic.
+
+**Urban Studies & Mobility Analysis**: Avoiding biased results in models predicting foot traffic, land use changes, or transport patterns.
+
+**Hyperparameter Tuning**: Optimizing parameters in machine learning models (e.g., SVMs) while maintaining spatial integrity in training and validation.
+
+**Big Data Applications**: When dealing with large geospatial datasets, proper validation methods help in making reliable predictions applicable to policy and planning.
+
 ## **Reflections**
+
+This week was dense. The topics where kind of abstract and sometimes I couldn't fully understand what was going on, but i got to understand the main ideas behind it. Doing the summary and reviewing the tables helped me to understand more but in general I think I'll understand it better once I start calculating my own accuracy in exercises. Still I am not sure if I'll get to need to do this kind of accuracy assessments at the most in-depth level once I graduate, but I think its a good idea to understand the basics so in case I encounter them in any paper or project I can understand what they mean and also not be so naive to believe in super high accuracies and always question what they really are assessing.

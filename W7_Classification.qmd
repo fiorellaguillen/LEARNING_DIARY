@@ -5,28 +5,70 @@ format: html
 
 ## **Summary**
 
-**Week 7 notes, yet to be organized:**
+This week we explored machine learning techniques and reviewed some remote sensing applications for them(like mapping urban sprawl, illegal logging, and land cover classification). Most of these concepts were completely new to me, so it was a great introduction to them and all the possibilities we have. Because it was my first time hearing of some of these methods, for this week's entry I decided to structure/categorise all the methods mentioned and include what they are and how they can be useful. Also, I organized kind of a dictionary to explain some of the main concepts that were used to talk about machine learning so I can have them for future reference.
 
-Expert learning: use human knowledge to train models
+### **Some foundational concepts:**
 
-Machine learning: teach computers to razonate like humans
+Human learning: uses *inductive learning*, so given our experience of the world, we make inferences on the images or data we see
 
-Classification: assign categories or discrete values
+Expert system: system that uses human knowledge as a base to solve problems. Tries to show a computer how humans reach decisions
 
-Regression trees: continous dependent variables. Used when linear regression doesn't fit (if it doesn't have the 4 linear regression conditions)
+Machine learning: science of computer modeling of learning process trying to replicate inductive learning
 
-Random forests: use many decision trees
+Two schools: On one side, *Traditional classifiers*, they don't apply a model, they just divide the data based on a feature space. On the other side, the newer methods use *Machine Learning*.
 
-ISODATA: same as k-means but with more hyperparameters
+### **Classification methods:**
 
-Supervised learning:
+**Linear Regression:** Predicts continuous values by finding the best fit between independent and dependent variables.
+
+**Decision Trees (CART):** Useful when linear regression assumptions don’t hold. Classification trees assign discrete categories, while regression trees predict continuous values by recursively splitting the data.
+
+**Random Forests:** Multiple decision trees working together, increasing accuracy but reducing interpretability. The model votes on the most likely classification, which makes it more reliable but harder to understand.
+
+Clustering/K-means: Similar to DBScan, it makes clusters depending on similarities with other pixels
+
+ISODATA: extension of k-means. similar but has some inputs called hyperparameters
+
+Supervised:
+
+Maximum likelihood, density slicing, parallelpiped : they are more classical methods not used that much nowadays. They have a class definition, selects the training data, applys the model to the rest of the data
+
+Support Vector Machine SVM: comparable to linear regression. Intead of a line theres a hyperplane and many support vectors . This hyperplane separated two types and allows some misclassification (soft margin). its a two class comparison but could be replicatedfor multiple tipes.
+
+-----
+
+### Machine learning concepts:
+
+Overfitting: when the model is too calibrated for my current data that if I give it a new one it would be useless. In order to avoid it we have to check for low bias and low variance. Bias: difference between predicted value and true value. How far is the average prediction from the actual average. Variance: variability of model for a given point. Difference between accuracy with train fit and test fit. (check if it generalises well)
+
+![](images/clipboard-273935459.png)
+
+Train and test data: we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)
+
+Cross-validation: same process but changing what is your train and test data each iteration. Ensures a more robust model.
+
+Bootstrap sampling: sampling by replacement. it means some rows of data can be duplicated
+
+Out of bag sample: rows of data not used for the random forest. It is used like a validation data set and is useful to get the out of bag error
+
+\*We would normally have both, train and test data and when training, have a % of train data and a % of out of the bag sample
+
+Supervised classification: means i give the model training data and it will identify the patterns and assign them to previously identified ctageories
+
+Unsupervised: gives a method or algorith and ask to do the classification. Has no human input and categories are not known a priori
+
+hyperparameters:control variables
+
+Black box: you just know if the model is good but loose interpretability. The most accuracte models usually have less interpretability.
 
 Spatial autocorrelation: if the train and test data are too close, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)
 
-Overfitting:
+------------------------------------------------------------------------
 
 ## **Applications**
 
 ## **Reflections**
 
 This week was mind blowing. I am not taking the CASA06 module so I haven't had the opportunity to see all the Machine Learning and classification options and I think this week was a great introduction/summary of most of the available options.
+
+Classification its super useful for data-scarce countries or cities to measure thing that are not formally mapped

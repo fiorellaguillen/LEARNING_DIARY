@@ -5,7 +5,27 @@ project:
 book:
   title: "CASA0023 Learning Diary"
   author: "Fiorella Guillen"
-  date: "03/03/2025"
+  date: "28/03/2025"
+  navbar:
+     logo: "images/casa_logo.jpg"
+     collapse: true
+     collapse-below: lg
+     background: light
+     search: true
+     right:
+      - icon: github
+        href: https://github.com/fiorellaguillen
+      - icon: linkedin
+        href: https://www.linkedin.com/in/fiorellaguillenh/
+     
+  sidebar:
+    title: "Learning Diary"
+    style: floating
+    reader-mode: true
+    collapse: true
+    pinned: false
+    
+  
   chapters:
     - index.qmd
     - W1_Introduction.qmd
@@ -15,8 +35,10 @@ book:
     - W6_GEE.qmd
     - W7_Classification.qmd
     - W8_Classification2.qmd
+    - W9_SAR.qmd
     - references.qmd
 
+favicon: "images/casa_logo.jpg"
 bibliography: references.bib
 
 format:

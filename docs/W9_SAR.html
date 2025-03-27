@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Google Earth Engine – CASA0023 Learning Diary</title>
+<title>9&nbsp; An Introduction to Remote Sensing – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./W7_Classification.html" rel="next">
-<link href="./W4_Policy.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./W8_Classification2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W6_GEE.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./W9_SAR.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W6_GEE.html" class="sidebar-item-text sidebar-link active">
+  <a href="./W6_GEE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./W9_SAR.html" class="sidebar-item-text sidebar-link">
+  <a href="./W9_SAR.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
@@ -195,12 +195,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> <strong>Summary</strong></a>
-  <ul class="collapse">
-  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.1.1</span> Practical</a></li>
-  </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></a></li>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">9.1</span> <strong>Summary</strong></a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">9.2</span> <strong>Applications</strong></a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">9.3</span> <strong>Reflections</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></h1>
 </div>
 
 
@@ -226,86 +223,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> <strong>Summary</strong></h2>
-<p>This week, we finally started using Google Earth Engine (GEE), and honestly, it felt like a game changer compared to earlier tools like SNAP. GEE makes satellite image analysis way more practical and less time-consuming. We went through the basics: how to access and manipulate satellite imagery, filter and scale values, join images, clip them, and even perform Principal Component Analysis (PCA).</p>
-<p>One thing to mention is that GEE runs on JavaScript, which sounds intimidating at first, but so far, we’ve only used relatively simple commands, so it’s not that bad. I have summarized some of the main things to remember when using Javascript in GEE, in the following image:</p>
-<p><img src="images/w6_javascript.png" class="img-fluid" width="400"></p>
-<p>Also, some words to keep in mind when working in GEE have been summarized here:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 29%">
-<col style="width: 70%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>GEE Elements</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><em>Image</em></td>
-<td>Raster</td>
-</tr>
-<tr class="even">
-<td><em>Feature</em></td>
-<td>Vector</td>
-</tr>
-<tr class="odd">
-<td><em>ImageCollection</em></td>
-<td>A stack of images</td>
-</tr>
-<tr class="even">
-<td><em>FeatureCollection</em></td>
-<td>A stack of features</td>
-</tr>
-<tr class="odd">
-<td><em>Client side</em></td>
-<td>Front end: The part that users interact with</td>
-</tr>
-<tr class="even">
-<td><em>Server side</em></td>
-<td>Back end: Where the data is retrieved and processed</td>
-</tr>
-</tbody>
-</table>
-<p>A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like <code>.map()</code> to speed things up as they have been optimized for GEE.</p>
-<p>Other important concepts:</p>
-<ul>
-<li><p><strong>Scale &amp; Resolution</strong>: GEE aggregates data based on zoom level—so the further you zoom out, the bigger each pixel represents. Scale and resolution are always linked!</p></li>
-<li><p><strong>Projection</strong>: Everything is converted to the Mercator projection by default.</p></li>
-<li><p><strong>Filtering</strong>: To avoid loading excessive data, we always filter by time and spatial bounds.</p></li>
-<li><p><strong>Operations &amp; Applications</strong>: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning.</p></li>
-</ul>
-<section id="practical" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="practical"><span class="header-section-number">6.1.1</span> Practical</h3>
-<p>In the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images. But overall it was amazing to finally use GEE and see how fast and practical it was to load the data for anywhere in the world and run the analysis.</p>
-<p><em>Image 1:</em> <em>PCA analysis of Iquitos, Peru</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/w6_iquitos.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
+<section id="summary" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">9.1</span> <strong>Summary</strong></h2>
+<p><strong>WEEK 9 Notes, yet to be organized:</strong></p>
+<p>C band is the most useful SAR band. Long enough that is not noisy</p>
+<p>SAR is seeing at 45° intead of having a huge antenaa(which means higher resolution), it receives images as moving, gaining distance and resolution</p>
+<p>scattering mechanism: the way that objects reflect</p>
+<p>rough scattering: chaotic, Sentinel 1 VV band</p>
+<p>we only have access to VH and VV</p>
+<p>X band is very easy to scatter, it just bounces and generates a rough surface C band penetrates leaves and shows branchs, generates volumes L band and P band can penetrate through branches and generate double bounde</p>
+<p>VV is good for surface roughness</p>
+<p>2 MODIS: Terra and Aqua</p>
 </section>
+<section id="applications" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">9.2</span> <strong>Applications</strong></h2>
 </section>
-<section id="applications" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></h2>
-<p>GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.</p>
-<p>Some key application areas:</p>
-<ul>
-<li><p><strong>Environmental Monitoring</strong>: Analyzing land cover changes, deforestation, and water body dynamics.</p></li>
-<li><p><strong>Urban Studies</strong>: Monitoring urban expansion, heat islands, and transportation networks.</p></li>
-<li><p><strong>Agriculture &amp; Vegetation</strong>: Using NDVI and other indices to assess crop health and vegetation patterns.</p></li>
-<li><p><strong>Disaster Response</strong>: Mapping flood-prone areas, tracking wildfires, and assessing damage after natural disasters.</p></li>
-<li><p><strong>Air Quality &amp; Climate</strong>: Analyzing pollution patterns and long-term climate trends.</p></li>
-</ul>
-<p>There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.</p>
-</section>
-<section id="reflections" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></h2>
-<p>Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now!</p>
-<p>On another topic, when Ollie mentioned that even though GEE has been around for over a decade, Google could decide to shut it down at any time, it made me think that it would be such a huge loss especially after seeing how much research has been done since it was launched, but it also made me think that then it makes sense that we didn’t go straight to it(even though that’s what I was initially expecting) but instead we first focused on learning the theoretical concepts and understanding the logic behind what’s happening in the background. I think this way, even if in the future we have to change to another program, we will not be starting from scratch as we now know the foundations of it.</p>
+<section id="reflections" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">9.3</span> <strong>Reflections</strong></h2>
 
 
 </section>
@@ -730,13 +664,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./W4_Policy.html" class="pagination-link" aria-label="An Introduction to Remote Sensing">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span>
+      <a href="./W8_Classification2.html" class="pagination-link" aria-label="An Introduction to Remote Sensing">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./W7_Classification.html" class="pagination-link" aria-label="An Introduction to Remote Sensing">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

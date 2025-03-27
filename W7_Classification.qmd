@@ -5,6 +5,28 @@ format: html
 
 ## **Summary**
 
+**Week 7 notes, yet to be organized:**
+
+Expert learning: use human knowledge to train models
+
+Machine learning: teach computers to razonate like humans
+
+Classification: assign categories or discrete values
+
+Regression trees: continous dependent variables. Used when linear regression doesn't fit (if it doesn't have the 4 linear regression conditions)
+
+Random forests: use many decision trees
+
+ISODATA: same as k-means but with more hyperparameters
+
+Supervised learning:
+
+Spatial autocorrelation: if the train and test data are too close, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)
+
+Overfitting:
+
 ## **Applications**
 
 ## **Reflections**
+
+This week was mind blowing. I am not taking the CASA06 module so I haven't had the opportunity to see all the Machine Learning and classification options and I think this week was a great introduction/summary of most of the available options.

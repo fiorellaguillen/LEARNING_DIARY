@@ -5,20 +5,63 @@ format: html
 
 ## **Summary**
 
-This week, we started using Google Earth Engine (GEE) and explored its basic concepts, terminology, and processes. We learned how to access and manipulate satellite imagery (filtering, scaling values, joining images, clipping them, and performing Principal Component Analysis). So far, all these processes have demonstrated to me that GEE is a highly practical tool that simplifies satellite image analysis compared to earlier weeks when we worked with SNAP, which was more complex and time consuming.
+This week, we finally started using Google Earth Engine (GEE), and honestly, it felt like a game changer compared to earlier tools like SNAP. GEE makes satellite image analysis way more practical and less time-consuming. We went through the basics: how to access and manipulate satellite imagery, filter and scale values, join images, clip them, and even perform Principal Component Analysis (PCA).
 
-In the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images.
+One thing to mention is that GEE runs on JavaScript, which sounds intimidating at first, but so far, we’ve only used relatively simple commands, so it’s not that bad. I have summarized some of the main things to remember when using Javascript in GEE, in the following image:
+
+![](images/w6_javascript.png){width="400"}
+
+Also, some words to keep in mind when working in GEE have been summarized here:
+
+| GEE Elements        | Meaning                                             |
+|-----------------|-----------------------------------------|
+| *Image*             | Raster                                              |
+| *Feature*           | Vector                                              |
+| *ImageCollection*   | A stack of images                                   |
+| *FeatureCollection* | A stack of features                                 |
+| *Client side*       | Front end: The part that users interact with        |
+| *Server side*       | Back end: Where the data is retrieved and processed |
+
+A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like `.map()` to speed things up as they have been optimized for GEE.
+
+Other important concepts:
+
+-   **Scale & Resolution**: GEE aggregates data based on zoom level—so the further you zoom out, the bigger each pixel represents. Scale and resolution are always linked!
+
+-   **Projection**: Everything is converted to the Mercator projection by default.
+
+-   **Filtering**: To avoid loading excessive data, we always filter by time and spatial bounds.
+
+-   **Operations & Applications**: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning.
+
+### Practical
+
+In the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images. But overall it was amazing to finally use GEE and see how fast and practical it was to load the data for anywhere in the world and run the analysis.
 
 *Image 1:* *PCA analysis of Iquitos, Peru*
 
 ![](images/w6_iquitos.png){fig-align="center"}
 
-Something I consider worth noting is that GEE has an extensive satellite data catalog, which enables a wide range of applications, from climate studies to nighttime light analysis, with global coverage for most datasets. I find this particularly valuable because, coming from a Global South country, I know it is common to lack extensive datasets at the level of cities like London. However, GEE's datasets cover the entire world, making it possible to conduct meaningful analyses even in data-scarce regions.
-
 ## **Applications**
 
-To be completed
+GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.
+
+Some key application areas:
+
+-   **Environmental Monitoring**: Analyzing land cover changes, deforestation, and water body dynamics.
+
+-   **Urban Studies**: Monitoring urban expansion, heat islands, and transportation networks.
+
+-   **Agriculture & Vegetation**: Using NDVI and other indices to assess crop health and vegetation patterns.
+
+-   **Disaster Response**: Mapping flood-prone areas, tracking wildfires, and assessing damage after natural disasters.
+
+-   **Air Quality & Climate**: Analyzing pollution patterns and long-term climate trends.
+
+There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.
 
 ## **Reflections**
 
-To be completed
+Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now!
+
+On another topic, when Ollie mentioned that even though GEE has been around for over a decade, Google could decide to shut it down at any time, it made me think that it would be such a huge loss especially after seeing how much research has been done since it was launched, but it also made me think that then it makes sense that we didn't go straight to it(even though that's what I was initially expecting) but instead we first focused on learning the theoretical concepts and understanding the logic behind what’s happening in the background. I think this way, even if in the future we have to change to another program, we will not be starting from scratch as we now know the foundations of it.

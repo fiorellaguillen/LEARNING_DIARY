@@ -64,7 +64,7 @@
     "href": "W3_RemoteSensingData.html",
     "title": "4  Remote Sensing Data",
     "section": "",
-    "text": "4.1 Summary\nIn order to move forward on more advanced topics, I considered useful to have a brief overview of main terminology used in Earth Observation mentioned during this week’s lecture.\nFirst, I want to explain the difference between 1. Irradiance and 2. Radiance. The first one, refers to any radiation reaching the Earth from the Sun. The second one, refers to any radiation leaving the Earth towards the satellite.",
+    "text": "4.1 Summary\nThis week introduced a lot of new concepts related to corrections, data joining, and enhancements in remote sensing. To keep things clear for future reference, I organized them into categories and decided to do kind of a “dictionary” of these concepts, so it will be useful to understand them when reviewing literature and seeing applications of it.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "W3_RemoteSensingData.html#applications",
     "title": "4  Remote Sensing Data",
     "section": "4.2 Applications",
-    "text": "4.2 Applications\nTo be completed",
+    "text": "4.2 Applications\nThese corrections and enhancements are essential for making sure remote sensing data is accurate and actually useful. For example, atmospheric corrections are super important for environmental monitoring, where we need consistent multi-temporal comparisons. Geometric corrections are crucial for historical imagery alignment, especially in change detection studies. Radiometric calibration ensures that sensor data is comparable across time and space.\nEnhancements also have a ton of applications in urban studies, agriculture, and disaster response. Band ratios (like NDVI) help in assessing vegetation health, while texture analysis is great for land-use classification. PCA is often used for detecting land-cover changes, highlighting major differences in multi-temporal images. Image fusion techniques improve spatial resolution, making high-precision mapping and infrastructure monitoring more effective.\nOne interesting example is multi-sensor fusion, where high-resolution panchromatic images enhance low-resolution multispectral data to improve feature detection. A study titled Multi-Sensor Fusion: A Simulation Approach to Pansharpening Aerial and Satellite Images (MDPI, 2020) discusses different ways to sharpen images and extract better features using fusion techniques.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "W3_RemoteSensingData.html#reflections",
     "title": "4  Remote Sensing Data",
     "section": "4.3 Reflections",
-    "text": "4.3 Reflections\nTo be completed",
+    "text": "4.3 Reflections\nAt first, learning about corrections and enhancements felt unnecessary as most modern datasets come preprocessed anyway. But after seeing the applications I think its worth knowing the possibilities we have and what we could do if we ever encounter raw data(maybe not even satellite data). Even if we end up using only Analysis-ready data, I now think it’s important to know what kind of process it has been through so we can assess it better and know what we are working with. Even though I now realise its importance, I found this week to be a bit overwhelming because of all the concepts, but after organizing everything, it started making sense. Some papers are still hard to follow with all their complex formulas, but at least now I have a better foundation to understand what’s going on, so I guess we are having progress!\nA couple things catched my attention this week. One thing that surprised me was how much regression is used in remote sensing. I always thought of regression as something for statistical modeling (like in CASA007), but it’s actually everywhere here, aligning images, calibrating radiance, enhancing quality, etc. The other one was seeing Andy’s fieldwork for atmospheric correction which seems pretty cool. It made me think that sometimes we might need higher levels of precision for our images and its interesting to see all the options we have available to handle that.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "W6_GEE.html",
     "title": "6  Google Earth Engine",
     "section": "",
-    "text": "6.1 Summary\nThis week, we started using Google Earth Engine (GEE) and explored its basic concepts, terminology, and processes. We learned how to access and manipulate satellite imagery (filtering, scaling values, joining images, clipping them, and performing Principal Component Analysis). So far, all these processes have demonstrated to me that GEE is a highly practical tool that simplifies satellite image analysis compared to earlier weeks when we worked with SNAP, which was more complex and time consuming.\nIn the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images.\nImage 1: PCA analysis of Iquitos, Peru\nSomething I consider worth noting is that GEE has an extensive satellite data catalog, which enables a wide range of applications, from climate studies to nighttime light analysis, with global coverage for most datasets. I find this particularly valuable because, coming from a Global South country, I know it is common to lack extensive datasets at the level of cities like London. However, GEE’s datasets cover the entire world, making it possible to conduct meaningful analyses even in data-scarce regions.",
+    "text": "6.1 Summary\nThis week, we finally started using Google Earth Engine (GEE), and honestly, it felt like a game changer compared to earlier tools like SNAP. GEE makes satellite image analysis way more practical and less time-consuming. We went through the basics: how to access and manipulate satellite imagery, filter and scale values, join images, clip them, and even perform Principal Component Analysis (PCA).\nOne thing to mention is that GEE runs on JavaScript, which sounds intimidating at first, but so far, we’ve only used relatively simple commands, so it’s not that bad. I have summarized some of the main things to remember when using Javascript in GEE, in the following image:\nAlso, some words to keep in mind when working in GEE have been summarized here:\nA key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like .map() to speed things up as they have been optimized for GEE.\nOther important concepts:",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "W6_GEE.html#applications",
     "title": "6  Google Earth Engine",
     "section": "6.2 Applications",
-    "text": "6.2 Applications\nTo be completed",
+    "text": "6.2 Applications\nGEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.\nSome key application areas:\n\nEnvironmental Monitoring: Analyzing land cover changes, deforestation, and water body dynamics.\nUrban Studies: Monitoring urban expansion, heat islands, and transportation networks.\nAgriculture & Vegetation: Using NDVI and other indices to assess crop health and vegetation patterns.\nDisaster Response: Mapping flood-prone areas, tracking wildfires, and assessing damage after natural disasters.\nAir Quality & Climate: Analyzing pollution patterns and long-term climate trends.\n\nThere’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
@@ -144,7 +144,7 @@
     "href": "W6_GEE.html#reflections",
     "title": "6  Google Earth Engine",
     "section": "6.3 Reflections",
-    "text": "6.3 Reflections\nTo be completed",
+    "text": "6.3 Reflections\nSwitching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now!\nOn another topic, when Ollie mentioned that even though GEE has been around for over a decade, Google could decide to shut it down at any time, it made me think that it would be such a huge loss especially after seeing how much research has been done since it was launched, but it also made me think that then it makes sense that we didn’t go straight to it(even though that’s what I was initially expecting) but instead we first focused on learning the theoretical concepts and understanding the logic behind what’s happening in the background. I think this way, even if in the future we have to change to another program, we will not be starting from scratch as we now know the foundations of it.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "W7_Classification.html",
     "title": "7  An Introduction to Remote Sensing",
     "section": "",
-    "text": "7.1 Summary",
+    "text": "7.1 Summary\nWeek 7 notes, yet to be organized:\nExpert learning: use human knowledge to train models\nMachine learning: teach computers to razonate like humans\nClassification: assign categories or discrete values\nRegression trees: continous dependent variables. Used when linear regression doesn’t fit (if it doesn’t have the 4 linear regression conditions)\nRandom forests: use many decision trees\nISODATA: same as k-means but with more hyperparameters\nSupervised learning:\nSpatial autocorrelation: if the train and test data are too close, they are probably very similar and the accuracy could be too high but the model not robust enough (overfitting)\nOverfitting:",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
     ]
@@ -204,9 +204,59 @@
     "href": "W7_Classification.html#reflections",
     "title": "7  An Introduction to Remote Sensing",
     "section": "7.3 Reflections",
-    "text": "7.3 Reflections",
+    "text": "7.3 Reflections\nThis week was mind blowing. I am not taking the CASA06 module so I haven’t had the opportunity to see all the Machine Learning and classification options and I think this week was a great introduction/summary of most of the available options.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "W9_SAR.html",
+    "href": "W9_SAR.html",
+    "title": "9  An Introduction to Remote Sensing",
+    "section": "",
+    "text": "9.1 Summary\nWEEK 9 Notes, yet to be organized:\nC band is the most useful SAR band. Long enough that is not noisy\nSAR is seeing at 45° intead of having a huge antenaa(which means higher resolution), it receives images as moving, gaining distance and resolution\nscattering mechanism: the way that objects reflect\nrough scattering: chaotic, Sentinel 1 VV band\nwe only have access to VH and VV\nX band is very easy to scatter, it just bounces and generates a rough surface C band penetrates leaves and shows branchs, generates volumes L band and P band can penetrate through branches and generate double bounde\nVV is good for surface roughness\n2 MODIS: Terra and Aqua",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "W9_SAR.html#applications",
+    "href": "W9_SAR.html#applications",
+    "title": "9  An Introduction to Remote Sensing",
+    "section": "9.2 Applications",
+    "text": "9.2 Applications",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "W9_SAR.html#reflections",
+    "href": "W9_SAR.html#reflections",
+    "title": "9  An Introduction to Remote Sensing",
+    "section": "9.3 Reflections",
+    "text": "9.3 Reflections",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>An Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "W6_GEE.html#summary",
+    "href": "W6_GEE.html#summary",
+    "title": "6  Google Earth Engine",
+    "section": "",
+    "text": "GEE Elements\nMeaning\n\n\n\n\nImage\nRaster\n\n\nFeature\nVector\n\n\nImageCollection\nA stack of images\n\n\nFeatureCollection\nA stack of features\n\n\nClient side\nFront end: The part that users interact with\n\n\nServer side\nBack end: Where the data is retrieved and processed\n\n\n\n\n\n\nScale & Resolution: GEE aggregates data based on zoom level—so the further you zoom out, the bigger each pixel represents. Scale and resolution are always linked!\nProjection: Everything is converted to the Mercator projection by default.\nFiltering: To avoid loading excessive data, we always filter by time and spatial bounds.\nOperations & Applications: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning.\n\n\n6.1.1 Practical\nIn the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images. But overall it was amazing to finally use GEE and see how fast and practical it was to load the data for anywhere in the world and run the analysis.\nImage 1: PCA analysis of Iquitos, Peru",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
+    ]
+  },
+  {
+    "objectID": "W3_RemoteSensingData.html#summary",
+    "href": "W3_RemoteSensingData.html#summary",
+    "title": "4  Remote Sensing Data",
+    "section": "",
+    "text": "4.1.0.1 Key Terms:\n\nIrradiance: Radiation reaching Earth from the Sun\nRadiance: Radiation leaving Earth toward the satellite\nReflectance: The proportion of incoming radiation reflected by a surface\nSurface Reflectance: Reflectance at the bottom of the atmosphere (after atmospheric correction).\nAnalysis-ready data: Preprocessed images, usually in Surface Reflectance format (so we don’t have to do all the corrections ourselves!)\n\n\n\n\n4.1.0.2 Corrections:\n\nGeometric correction: Aligns misaligned images using control points and regression (basically shifting everything so it matches properly). Useful for correcting historical maps to match modern spatial data.\nAtmospheric correction: Removes distortions caused by atmospheric scattering (because the atmosphere its always there!).\nMethods include:\n\nDark Object Subtraction (DOS): Finds something that should have zero reflectance and subtracts its measured value from all pixels\nPseudo-Invariant Features (PIFs): Uses objects with stable reflectance over time as references for correction (great for long-term studies)\nFlat correction: Uses field-measured values (without atmospheric interference) as a baseline for regression\n\nOrthorectification: Fixes distortions from sensor tilt\nRadiometric calibration: Converts Digital Number (DN) to spectral radiance to standardize measurements\n\n\n\n4.1.0.3 Enhancements:\n\nContrast adjustments: Modifies image appearance without changing data values (basically, just making it look better)\nBand ratios: Dividing one band by another (e.g., NDVI for vegetation analysis)\nFiltering: Can be low-pass (smoothing) or high-pass (highlighting edges, like for detecting buildings)\nPrincipal Component Analysis (PCA): Reduces dimensionality to capture the most variance (helps focus on key changes in images, but could loose some interpretability)\nTexture analysis: Measures similarity between a pixel and its neighbors (useful for spotting urban areas or specific land features)\nImage fusion & pan-sharpening: Merges data from different sensors, often using high-resolution bands to sharpen lower-resolution images",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Remote Sensing Data</span>"
     ]
   }
 ]

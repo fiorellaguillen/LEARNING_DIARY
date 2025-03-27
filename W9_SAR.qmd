@@ -1,0 +1,28 @@
+---
+title: "An Introduction to Remote Sensing"
+format: html
+---
+
+## **Summary**
+
+**WEEK 9 Notes, yet to be organized:**
+
+C band is the most useful SAR band. Long enough that is not noisy
+
+SAR is seeing at 45° intead of having a huge antenaa(which means higher resolution), it receives images as moving, gaining distance and resolution
+
+scattering mechanism: the way that objects reflect
+
+rough scattering: chaotic, Sentinel 1 VV band
+
+we only have access to VH and VV
+
+X band is very easy to scatter, it just bounces and generates a rough surface C band penetrates leaves and shows branchs, generates volumes L band and P band can penetrate through branches and generate double bounde
+
+VV is good for surface roughness
+
+2 MODIS: Terra and Aqua
+
+## **Applications**
+
+## **Reflections**

@@ -198,13 +198,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> <strong>Summary</strong></a>
   <ul class="collapse">
   <li><a href="#some-foundational-concepts" id="toc-some-foundational-concepts" class="nav-link" data-scroll-target="#some-foundational-concepts"><span class="header-section-number">7.1.1</span> <strong>Some foundational concepts:</strong></a></li>
-  <li><a href="#classification-methods" id="toc-classification-methods" class="nav-link" data-scroll-target="#classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods:</strong></a></li>
+  <li><a href="#classification-methods" id="toc-classification-methods" class="nav-link" data-scroll-target="#classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods</strong></a></li>
   <li><a href="#machine-learning-concepts" id="toc-machine-learning-concepts" class="nav-link" data-scroll-target="#machine-learning-concepts"><span class="header-section-number">7.1.3</span> Machine learning concepts:</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> <strong>Applications</strong></a>
   <ul class="collapse">
   <li><a href="#detecting-industrial-oil-palm-plantations-on-landsat-images-with-google-earth-engine" id="toc-detecting-industrial-oil-palm-plantations-on-landsat-images-with-google-earth-engine" class="nav-link" data-scroll-target="#detecting-industrial-oil-palm-plantations-on-landsat-images-with-google-earth-engine"><span class="header-section-number">7.2.1</span> Detecting industrial oil palm plantations on Landsat images with Google Earth Engine</a></li>
   <li><a href="#mapping-informal-settlements-in-developing-countries-using-machine-learning-and-low-resolution-multi-spectral-data" id="toc-mapping-informal-settlements-in-developing-countries-using-machine-learning-and-low-resolution-multi-spectral-data" class="nav-link" data-scroll-target="#mapping-informal-settlements-in-developing-countries-using-machine-learning-and-low-resolution-multi-spectral-data"><span class="header-section-number">7.2.2</span> Mapping Informal Settlements in Developing Countries using Machine Learning and Low Resolution Multi-spectral Data</a></li>
+  <li><a href="#some-thoughts" id="toc-some-thoughts" class="nav-link" data-scroll-target="#some-thoughts"><span class="header-section-number">7.2.3</span> Some thoughts</a></li>
   </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">7.3</span> <strong>Reflections</strong></a></li>
   </ul>
@@ -238,30 +239,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="some-foundational-concepts" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="some-foundational-concepts"><span class="header-section-number">7.1.1</span> <strong>Some foundational concepts:</strong></h3>
 <p><strong>Human learning:</strong> uses <em>inductive learning</em>, so given our experience of the world, we make inferences on the images or data we see</p>
-<p><strong>Expert system:</strong> system that uses human knowledge as a base to solve problems. Tries to show a computer how humans reach decisions</p>
+<p><strong>Expert system:</strong> system that uses <em>human knowledge as a base</em> to solve problems. Tries to show a computer how humans reach decisions</p>
 <p><strong>Machine learning:</strong> science of computer modeling of learning process trying to replicate inductive learning</p>
-<p><strong>Two schools:</strong> On one side, <em>Traditional classifiers</em>, they don’t apply a model, they just divide the data based on a feature space. On the other side, the newer methods use <em>Machine Learning</em>.</p>
+<p><strong>Two schools:</strong> on one side, <em>Traditional classifiers</em>, they don’t apply a model, they just divide the data based on a feature space. On the other side, the newer methods use <em>Machine Learning</em>.</p>
 </section>
 <section id="classification-methods" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods:</strong></h3>
-<p><strong>Linear Regression:</strong> Predicts continuous values by finding the best fit between independent and dependent variables.</p>
-<p><strong>Decision Trees (CART):</strong> Useful when linear regression assumptions don’t hold. Classification trees assign discrete categories, while regression trees predict continuous values by recursively splitting the data.</p>
-<p><strong>Random Forests:</strong> Multiple decision trees working together, increasing accuracy but reducing interpretability. The model votes on the most likely classification, which makes it more reliable but harder to understand.</p>
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="classification-methods"><span class="header-section-number">7.1.2</span> <strong>Classification methods</strong></h3>
+<p><em>Image 1. Summary of all classification methods mentioned in class</em></p>
+<p><img src="images/clipboard-2804631338.png" class="img-fluid"></p>
+<p><strong>Linear Regression:</strong> Predicts continuous values by finding the best fit between independent and dependent variables</p>
+<p><strong>Decision Trees (CART):</strong> Useful when linear regression assumptions don’t hold. Classification trees assign discrete categories, while regression trees predict continuous values by recursively splitting the data</p>
+<p><strong>Random Forests:</strong> Multiple decision trees working together, increasing accuracy but reducing interpretability. The model votes on the most likely classification, which makes it more reliable but harder to understand</p>
 <p><strong>Clustering/K-means:</strong> Unsupervised method, similar to DBScan, it makes clusters depending on similarities with other pixels. Useful when categories are unknown</p>
 <p><strong>ISODATA:</strong> Extension of K-means. Similar but has some inputs called hyperparameters</p>
-<p><strong>Maximum likelihood, density slicing, parallelpiped</strong> : They are more classical methods not used that much nowadays. They are supervised methods that start with a class definition, selects the training data, and applies the model to the rest of the data.</p>
-<p><strong>Support Vector Machine SVM:</strong> Comparable to linear regression. Instead of a line there’s a hyperplane and many support vectors . This hyperplane separated two classes but allows some misclassificationndefined(soft margin). It’s a two class comparison but could be replicated for multiple classes.</p>
-<p><strong>Neural Networks &amp; Deep Learning:</strong> We didn’t cover these in detail, but they represent the next level, more powerful but often a “black box,” meaning high accuracy at the cost of interpretability.</p>
+<p><strong>Maximum likelihood, density slicing, parallelpiped</strong> : They are more classical methods not used that much nowadays. They are supervised methods that start with a class definition, selects the training data, and applies the model to the rest of the data</p>
+<p><strong>Support Vector Machine SVM:</strong> Comparable to linear regression. Instead of a line there’s a hyperplane and many support vectors . This hyperplane separated two classes but allows some misclassificationndefined(soft margin). It’s a two class comparison but could be replicated for multiple classes</p>
+<p><strong>Neural Networks &amp; Deep Learning:</strong> We didn’t cover these in detail, but they represent the next level, more powerful but often a “black box,” meaning high accuracy at the cost of interpretability</p>
 </section>
 <section id="machine-learning-concepts" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="machine-learning-concepts"><span class="header-section-number">7.1.3</span> Machine learning concepts:</h3>
 <p><strong>Overfitting:</strong> When the model fits the training data too well that makes it useless for new data. In order to avoid it we have to check for <em>low bias</em> (difference between predicted value and true value) and <em>low variance</em> (difference in accuracy between train fit and test fit)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-273935459.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="700"></p>
-</figure>
-</div>
-<p><strong>Train and test data:</strong> we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)</p>
+<p><em>Image 2. Bias and variance in overfitting</em></p>
+<p><img src="images/clipboard-3670017993.png" class="img-fluid"></p>
+<p><a href="https://www.researchgate.net/publication/364826401_Understanding_basic_principles_of_Artificial_Intelligence_a_practical_guide_for_intensivists">Source</a></p>
+<p><strong>Train and test data:</strong> we develop the model with train data and it doesn’t see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)</p>
 <p><strong>Cross-validation:</strong> same process but changing what is your train and test data each iteration. It ensures a more robust model.</p>
 <p><strong>Bootstrap sampling:</strong> sampling by replacement. it means some rows of data can be duplicated</p>
 <p><strong>Out of bag sample:</strong> rows of data not used for the random forest. It is used like a validation dataset and is useful to get the out of bag error</p>
@@ -274,16 +275,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> <strong>Applications</strong></h2>
-<p>Machine learning is a game-changer for remote sensing, particularly in regions where traditional data collection is difficult or expensive. Some key applications include</p>
-<p><strong>Urban Growth &amp; Land Cover Classification:</strong> Identifying informal settlements, urban expansion, or deforestation using satellite imagery. Supervised classification methods like SVM or Random Forests are commonly used for this.</p>
-<p><strong>Disaster Response &amp; Environmental Monitoring:</strong> Mapping flooded areas or monitoring forest loss. Unsupervised methods like K-means can be used to detect changes over time.</p>
-<p><strong>Agriculture &amp; Food Security:</strong> Classifying different crop types, predicting yields, or assessing drought impacts. Machine learning models can process multispectral images to detect vegetation health.</p>
-<p><strong>Climate Change Studies:</strong> Analyzing glaciers, urban heat islands, or desertification trends using historical and real-time satellite data.</p>
-<p><strong>Data-Sparse Regions:</strong> In Global South countries, official land-use maps may be outdated or nonexistent. Machine learning allows researchers to generate high-quality maps from remote sensing data, filling gaps in public datasets.</p>
-<p>What stood out to me is how machine learning makes it possible to analyze and classify areas that might otherwise be impossible to map manually. In cities with rapid urbanization but little official data, these techniques can provide real-time insights that governments and researchers can act upon.</p>
+<p>This week, what stood out to me is how machine learning makes it possible to analyze and classify areas that might otherwise be impossible to map manually, which can be useful for governments to monitor or identify areas that require intervention but often lack resources to do so. Thinking on that, this week’s applications will be focused on examples that can help local governments monitor critical areas to improve natural resources protection and urban planning or aid distribution.</p>
+<p>This week, what stood out to me is how machine learning makes it possible to analysis and classificy of areas that would be nearly impossible to map manually. This can be especially useful for governments to monitor and identify regions that require intervention but often lack the resources to do so. With that in mind, this week’s focus is on applications that can help local governments monitor critical areas and could potentially help natural resource protection, and urban planning or aid distribution.</p>
 <section id="detecting-industrial-oil-palm-plantations-on-landsat-images-with-google-earth-engine" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="detecting-industrial-oil-palm-plantations-on-landsat-images-with-google-earth-engine"><span class="header-section-number">7.2.1</span> Detecting industrial oil palm plantations on Landsat images with Google Earth Engine</h3>
-<p>This paper by <a href="https://www.sciencedirect.com/science/article/pii/S235293851630129X">Huay et al.(2016)</a></p>
+<p>This paper by <a href="https://www.sciencedirect.com/science/article/pii/S235293851630129X">Huay et al.(2016)</a> explored how GEE could be used as a low cost, accessible tool to detect industrial oil palm plantations using Landsat 8 satellite imagery. The research focused on Tripa, Indonesia, and tested different spectral bands (RGB, NIR, SWIR, etc.) to classify land cover types like forests, water, and oil palm. Different machine learning algorithms were used and <em>Classification and Regression Trees (CART)</em> and <em>Random Forests</em>, where the ones with better performance for this task. The study also found that pixel based classification has limitations, especially in distinguishing oil palm from similar land covers, and mentioned it would be useful to improve this classification in the future using object-based classification and SAR imagery.</p>
+<p>Overall I found this kind of research really useful as a guidance on which classification methods perform better for land use monitoring, especially useful in regions vulnerable to deforestation.</p>
+<p><em>Image 1.&nbsp;Classification results of Classification and Regression Trees (CART) using ALL bands (a), Random Forests (RFT) using ALL bands (b), and CART using RGB bands (c) of&nbsp;<a href="https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/landsat" title="Learn more about Landsat from ScienceDirect's AI-generated Topic Pages">Landsat</a>&nbsp;8 TOA image from 2014 (d).</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-4190448481.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="572"></p>
@@ -292,20 +290,25 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="mapping-informal-settlements-in-developing-countries-using-machine-learning-and-low-resolution-multi-spectral-data" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="mapping-informal-settlements-in-developing-countries-using-machine-learning-and-low-resolution-multi-spectral-data"><span class="header-section-number">7.2.2</span> Mapping Informal Settlements in Developing Countries using Machine Learning and Low Resolution Multi-spectral Data</h3>
-<p>This paper by <a href="https://dl.acm.org/doi/pdf/10.1145/3306618.3314253">Gram-Hansen et al.(2019)</a></p>
+<p>This paper by <a href="https://dl.acm.org/doi/pdf/10.1145/3306618.3314253">Gram-Hansen et al.(2019)</a> tackle the issue that most vulnerable people live in informal settlements but yet they often go unmapped, making aid allocations more difficult. So, they explored two approaches for detecting informal settlements using satellite imagery and different machine learning methods and resolutions. The first method relied on low-resolution Sentinel-2 data, where a pixel wise classifier is trained to recognize the spectral signature of informal settlements(the benefits being that it’s computationally efficient and uses freely available data). The second method, which is more resource intensive, applied Convolutional Neural Networks (CNN) to very high resolution (VHR) imagery, allowing for more detailed mapping.</p>
+<p>What they found is that informal settlements can be effectively detected even using only lower resolution imagery, which is a great discovery for making largescale mapping more accessible, even in settings where resources are limited.</p>
+<p><em>Image 2. Predictions of informal settlements in Kibera, Nairobi. Left: The CCF prediction of informal settlements in Kibera on low-resolution Sentinel-2 spectral imagery. Middle: Deep learning based prediction of informal settlements in Kibera, trained on VHR imagery. Right: The ground truth informal settlement mask for Kibera.</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-987288024.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p><em>Predictions of informal settlements (white pixels) in Kibera, Nairobi. Left: The CCF prediction of informal settlements in Kibera on low-resolution Sentinel-2 spectral imagery. Middle: Deep learning based prediction of informal settlements in Kibera, trained on VHR imagery. Right: The ground truth informal settlement mask for Kibera.</em></p>
+</section>
+<section id="some-thoughts" class="level3" data-number="7.2.3">
+<h3 data-number="7.2.3" class="anchored" data-anchor-id="some-thoughts"><span class="header-section-number">7.2.3</span> Some thoughts</h3>
+<p>Both cases prove that machine learning can map complex land cover types using satellite imagery, even with freely available data like Sentinel 2 or Landsat 8, and simpler machine learning methods, making them powerful, real time and cost effective mapping tools. I think this is a great discovery for Governments which could use these rather simple models to improve their planning and response efforts.</p>
 </section>
 </section>
 <section id="reflections" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">7.3</span> <strong>Reflections</strong></h2>
 <p>This week was honestly mind blowing. Since I’m not taking the CASA06 module (which goes deeper into ML), I hadn’t really explored all the different Machine Learning and classification techniques before. This felt like a great introduction to not just to the methods themselves, but also to how they can be applied to remote sensing.</p>
 <p>Before this, I saw Machine Learning as something super advanced and kind of out of my league. But after this class, I realized I’ve actually been using it all along (like with something as simple as Linear Regression). It’s also funny to see all the current hype around AI and ML when in reality, a lot of these models are just statistical methods that have been around for decades. That said, I also got a sense of how many more complex approaches exist, and I hope I can explore them later in more advanced applications!</p>
-<p>One key takeaway (which also ties back to something Jon mentioned in one of the first FSDS lectures) is that just because we have all these sophisticated models available doesn’t mean we should always go for the most complex one. Sometimes, a simpler model is the better choice, especially since accuracy and complexity often come at the cost of interpretability. This is particularly important in areas like policy and urban planning (which is what I’m aiming to work in), where having a clear, explainable model can be more valuable than one that’s just technically precise.</p>
+<p>One key takeaway (which also ties back to something Jon mentioned in one of the first FSDS lectures) is that just because we have all these sophisticated models available doesn’t mean we should always go for the most complex one(also as the examples above show). Sometimes, a simpler model is the better choice, especially since accuracy and complexity often come at the cost of interpretability. I think this is particularly important in areas like policy and urban planning (which is what I’m aiming to work in), where having a clear, explainable model can be more valuable than one that’s just technically precise.</p>
 <p>Overall, this week’s content was super useful, and I’m really excited to apply it in GEE, my other modules, and even my dissertation!</p>
 
 

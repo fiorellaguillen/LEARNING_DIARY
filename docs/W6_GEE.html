@@ -199,10 +199,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.1.1</span> Practical</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></a>
-  <ul class="collapse">
-  <li><a href="#analysis-of-changes-in-rivers-planforms-using-gee" id="toc-analysis-of-changes-in-rivers-planforms-using-gee" class="nav-link" data-scroll-target="#analysis-of-changes-in-rivers-planforms-using-gee"><span class="header-section-number">6.2.1</span> Analysis of changes in rivers planforms using GEE</a></li>
-  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></a></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></a></li>
   </ul>
 </nav>
@@ -241,8 +238,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Also, some words to keep in mind when working in GEE have been summarized here:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 29%">
-<col style="width: 70%">
+<col style="width: 28%">
+<col style="width: 71%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -277,13 +274,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like <code>.map()</code> to speed things up as they have been optimized for GEE.</p>
+<p>A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like <code>.map()</code> to speed things up as they have been optimized for GEE. (this was mentioned and emphasized A LOT, so good to keep in mind)</p>
 <p>Other important concepts:</p>
 <ul>
 <li><p><strong>Scale &amp; Resolution</strong>: GEE aggregates data based on zoom level—so the further you zoom out, the bigger each pixel represents. Scale and resolution are always linked!</p></li>
-<li><p><strong>Projection</strong>: Everything is converted to the Mercator projection by default.</p></li>
-<li><p><strong>Filtering</strong>: To avoid loading excessive data, we always filter by time and spatial bounds.</p></li>
-<li><p><strong>Operations &amp; Applications</strong>: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning.</p></li>
+<li><p><strong>Projection</strong>: Everything is converted to the Mercator projection by default</p></li>
+<li><p><strong>Filtering</strong>: To avoid loading excessive data, we always filter by time and spatial bounds</p></li>
+<li><p><strong>Operations &amp; Applications</strong>: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning</p></li>
 </ul>
 <section id="practical" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="practical"><span class="header-section-number">6.1.1</span> Practical</h3>
@@ -298,36 +295,26 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></h2>
-<p>GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.</p>
+<p>One of the things that amazed me the most this week was GEE’s massive satellite data catalog, which opens the door for a huge range of applications. So for this week’s entry instead of focusing on two different research, I decided to change it a bit and first give a general overview of some of the datasets in the catalog that I found more interesting so I can have them on hand for future referece.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-2519461712.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="847"></p>
+<p><img src="images/gee_app.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p><a href="https://developers.google.com/earth-engine/datasets/tags/agriculture">Source</a></p>
-<p>Some key application areas:</p>
+<p><a href="https://developers.google.com/earth-engine/datasets">Source</a></p>
+<p>I decided to focus on the GEE Catalog’s category of Human Dimensions. There I found very diverse maps about agriculture, infrastructure and population as the ones I displayed over here. It was interesting to see how diverse these datasets are and how most of them have a global coverage and really small cadence(which I think is valuable for regions like the Global South where detailed geospatial datasets are often not available). At least in this category of the catalog, most of the datasets are already preprocessed, so it’s not only the satellite image but has already had a land classification or object detection which aligns with what was mentioned briefly in the lecture about the possibility of integrating GEE with machine learning models for those tasks(that we will cover later on the module).</p>
+<p>Some key application areas I can think of after seeing the options available are:</p>
 <ul>
-<li><p><strong>Environmental Monitoring</strong>: Analyzing land cover changes, deforestation, and water body dynamics.</p></li>
-<li><p><strong>Urban Studies</strong>: Monitoring urban expansion, heat islands, and transportation networks.</p></li>
-<li><p><strong>Agriculture &amp; Vegetation</strong>: Using NDVI and other indices to assess crop health and vegetation patterns.</p></li>
-<li><p><strong>Disaster Response</strong>: Mapping flood-prone areas, tracking wildfires, and assessing damage after natural disasters.</p></li>
-<li><p><strong>Air Quality &amp; Climate</strong>: Analyzing pollution patterns and long-term climate trends.</p></li>
+<li><p><strong>Environmental Monitoring</strong>: identify rapid changes in temperature due to global warming</p></li>
+<li><p><strong>Urban Studies</strong>: monitoring urban expansion or urban density</p></li>
+<li><p><strong>Agriculture &amp; Vegetation</strong>: monitoring forest cover, forest degradation</p></li>
+<li><p><strong>Disaster Response</strong>: mapping affected population and damage after natural disasters or wars</p></li>
+<li><p><strong>Natural Resources monitoring:</strong> identifying illegal logging, or illegal fishing</p></li>
 </ul>
-<p>There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.</p>
-<section id="analysis-of-changes-in-rivers-planforms-using-gee" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="analysis-of-changes-in-rivers-planforms-using-gee"><span class="header-section-number">6.2.1</span> Analysis of changes in rivers planforms using GEE</h3>
-<p>This paper by <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2020.1792575?needAccess=true#abstract">Tobón and Cañón (2019)</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2524360598.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="784"></p>
-</figure>
-</div>
-<p><em>Figure 6.&nbsp;Example of methods for surface water delimitation in two river reaches: AWEI in (a) Landsat and (b) Sentinel; NDWI in (c) Landsat and (d) Sentinel; MNDWI in (e) Landsat and (f) Sentinel. The same quadrants used for Landsat and Sentinel</em></p>
-</section>
 </section>
 <section id="reflections" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></h2>
-<p>Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now!</p>
+<p>Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now! And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.</p>
 <p>On another topic, when Ollie mentioned that even though GEE has been around for over a decade, Google could decide to shut it down at any time, it made me think that it would be such a huge loss especially after seeing how much research has been done since it was launched, but it also made me think that then it makes sense that we didn’t go straight to it(even though that’s what I was initially expecting) but instead we first focused on learning the theoretical concepts and understanding the logic behind what’s happening in the background. I think this way, even if in the future we have to change to another program, we will not be starting from scratch as we now know the foundations of it.</p>
 
 

@@ -14,7 +14,7 @@ One thing to mention is that GEE runs on JavaScript, which sounds intimidating a
 Also, some words to keep in mind when working in GEE have been summarized here:
 
 | GEE Elements        | Meaning                                             |
-|---------------------|---------------------------------------------------|
+|---------------------|-----------------------------------------------------|
 | *Image*             | Raster                                              |
 | *Feature*           | Vector                                              |
 | *ImageCollection*   | A stack of images                                   |
@@ -22,17 +22,17 @@ Also, some words to keep in mind when working in GEE have been summarized here:
 | *Client side*       | Front end: The part that users interact with        |
 | *Server side*       | Back end: Where the data is retrieved and processed |
 
-A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like `.map()` to speed things up as they have been optimized for GEE.
+A key takeaway is that using GEE’s built-in server side functions is way better performance wise. So, for example, instead of writing traditional loops, we should use functions like `.map()` to speed things up as they have been optimized for GEE. (this was mentioned and emphasized A LOT, so good to keep in mind)
 
 Other important concepts:
 
 -   **Scale & Resolution**: GEE aggregates data based on zoom level—so the further you zoom out, the bigger each pixel represents. Scale and resolution are always linked!
 
--   **Projection**: Everything is converted to the Mercator projection by default.
+-   **Projection**: Everything is converted to the Mercator projection by default
 
--   **Filtering**: To avoid loading excessive data, we always filter by time and spatial bounds.
+-   **Filtering**: To avoid loading excessive data, we always filter by time and spatial bounds
 
--   **Operations & Applications**: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning.
+-   **Operations & Applications**: GEE lets us perform geometric operations, corrections, enhancements, and even advanced tasks like machine learning, classification, and deep learning
 
 ### Practical
 
@@ -44,36 +44,28 @@ In the practical, we applied these concepts to the city of Delhi, but I also dec
 
 ## **Applications**
 
-GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.
+One of the things that amazed me the most this week was GEE’s massive satellite data catalog, which opens the door for a huge range of applications. So for this week's entry instead of focusing on two different research, I decided to change it a bit and first give a general overview of some of the datasets in the catalog that I found more interesting so I can have them on hand for future referece.
 
-![](images/clipboard-2519461712.png){fig-align="center" width="847"}
+![](images/gee_app.png){fig-align="center"}
 
-[Source](https://developers.google.com/earth-engine/datasets/tags/agriculture)
+[Source](https://developers.google.com/earth-engine/datasets)
 
-Some key application areas:
+I decided to focus on the GEE Catalog's category of Human Dimensions. There I found very diverse maps about agriculture, infrastructure and population as the ones I displayed over here. It was interesting to see how diverse these datasets are and how most of them have a global coverage and really small cadence(which I think is valuable for regions like the Global South where detailed geospatial datasets are often not available). At least in this category of the catalog, most of the datasets are already preprocessed, so it's not only the satellite image but has already had a land classification or object detection which aligns with what was mentioned briefly in the lecture about the possibility of integrating GEE with machine learning models for those tasks(that we will cover later on the module).
 
--   **Environmental Monitoring**: Analyzing land cover changes, deforestation, and water body dynamics.
+Some key application areas I can think of after seeing the options available are:
 
--   **Urban Studies**: Monitoring urban expansion, heat islands, and transportation networks.
+-   **Environmental Monitoring**: identify rapid changes in temperature due to global warming
 
--   **Agriculture & Vegetation**: Using NDVI and other indices to assess crop health and vegetation patterns.
+-   **Urban Studies**: monitoring urban expansion or urban density
 
--   **Disaster Response**: Mapping flood-prone areas, tracking wildfires, and assessing damage after natural disasters.
+-   **Agriculture & Vegetation**: monitoring forest cover, forest degradation
 
--   **Air Quality & Climate**: Analyzing pollution patterns and long-term climate trends.
+-   **Disaster Response**: mapping affected population and damage after natural disasters or wars
 
-There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.
-
-### Analysis of changes in rivers planforms using GEE
-
-This paper by [Tobón and Cañón (2019)](https://www.tandfonline.com/doi/full/10.1080/01431161.2020.1792575?needAccess=true#abstract)
-
-![](images/clipboard-2524360598.png){fig-align="center" width="784"}
-
-*Figure 6. Example of methods for surface water delimitation in two river reaches: AWEI in (a) Landsat and (b) Sentinel; NDWI in (c) Landsat and (d) Sentinel; MNDWI in (e) Landsat and (f) Sentinel. The same quadrants used for Landsat and Sentinel*
+-   **Natural Resources monitoring:** identifying illegal logging, or illegal fishing
 
 ## **Reflections**
 
-Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now!
+Switching to GEE made everything feel much more efficient. Compared to previous weeks, loading and manipulating large datasets (even for the whole world) was a breeze. The user interface of GEE was a bit overwhelming at first, but that’s probably just because it was my first time using it, but overall it seems that it offers many functionalities that I am looking forward to try in the next weeks. On that line, the GEE catalog made me realize how much data we have available and how using Remote Sensing is democratizing the access to many datasets that will definitely benefit research and data-informed policy making especially in countries where data availability is usually an issue, like my country. I think the possibilities are endless now! And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.
 
 On another topic, when Ollie mentioned that even though GEE has been around for over a decade, Google could decide to shut it down at any time, it made me think that it would be such a huge loss especially after seeing how much research has been done since it was launched, but it also made me think that then it makes sense that we didn't go straight to it(even though that's what I was initially expecting) but instead we first focused on learning the theoretical concepts and understanding the logic behind what’s happening in the background. I think this way, even if in the future we have to change to another program, we will not be starting from scratch as we now know the foundations of it.

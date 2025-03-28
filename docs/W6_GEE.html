@@ -199,7 +199,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.1.1</span> Practical</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></a>
+  <ul class="collapse">
+  <li><a href="#analysis-of-changes-in-rivers-planforms-using-gee" id="toc-analysis-of-changes-in-rivers-planforms-using-gee" class="nav-link" data-scroll-target="#analysis-of-changes-in-rivers-planforms-using-gee"><span class="header-section-number">6.2.1</span> Analysis of changes in rivers planforms using GEE</a></li>
+  </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></a></li>
   </ul>
 </nav>
@@ -234,8 +237,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Also, some words to keep in mind when working in GEE have been summarized here:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 28%">
-<col style="width: 71%">
+<col style="width: 29%">
+<col style="width: 70%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -292,6 +295,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="applications" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> <strong>Applications</strong></h2>
 <p>GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.</p>
+<p><img src="images/clipboard-2519461712.png" class="img-fluid" width="749"></p>
+<p><a href="https://developers.google.com/earth-engine/datasets/tags/agriculture">Source</a></p>
 <p>Some key application areas:</p>
 <ul>
 <li><p><strong>Environmental Monitoring</strong>: Analyzing land cover changes, deforestation, and water body dynamics.</p></li>
@@ -301,6 +306,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Air Quality &amp; Climate</strong>: Analyzing pollution patterns and long-term climate trends.</p></li>
 </ul>
 <p>There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.</p>
+<section id="analysis-of-changes-in-rivers-planforms-using-gee" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="analysis-of-changes-in-rivers-planforms-using-gee"><span class="header-section-number">6.2.1</span> Analysis of changes in rivers planforms using GEE</h3>
+<p>This paper by <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2020.1792575?needAccess=true#abstract">Tobón and Cañón (2019)</a></p>
+<p><img src="images/clipboard-2524360598.png" class="img-fluid" width="771"></p>
+<p><em>Figure 6.&nbsp;Example of methods for surface water delimitation in two river reaches: AWEI in (a) Landsat and (b) Sentinel; NDWI in (c) Landsat and (d) Sentinel; MNDWI in (e) Landsat and (f) Sentinel. The same quadrants used for Landsat and Sentinel</em></p>
+</section>
 </section>
 <section id="reflections" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> <strong>Reflections</strong></h2>

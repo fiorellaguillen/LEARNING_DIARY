@@ -11,6 +11,8 @@ This Learning Diary is part of the CASA0023 module, *Remotely Sensing Cities and
 
 **But first, let me introduce myself!**
 
+![](images/closeup photo.jpg){width="230"}
+
 My name is Fiorella, and I’m currently pursuing an MSc in Urban Spatial Science. Back in 2021, I graduated as an architect and urbanist in Peru. Since then, I have developed a strong interest in sustainability, climate change, water resources, and urban settlements, particularly how these factors affect urban and natural environments. As an example, during my undergraduate thesis, I focused on assessing changes in a river in the Peruvian Amazon, accelerated by climate change, and proposed solutions to the urban challenges that emerged from these changes.
 
 Since graduating, I have worked in the public sector, contributing to Lima’s Rimac River renaturalization project. This role involved urban analysis, master planning, urban design, and policy implementation, with a strong emphasis on risk prevention, and nature-based solutions.

@@ -89,6 +89,17 @@ Understanding spatial cross-validation is crucial for improving model reliabilit
 
 **Big Data Applications**: When dealing with large geospatial datasets, proper validation methods help in making reliable predictions applicable to policy and planning.
 
+### Mapping informal settlement indicators using object-oriented analysis in the Middle East
+
+This paper by [Fallatah et al.(2017) ](https://www.tandfonline.com/doi/full/10.1080/17538947.2018.1485753#abstract)
+
+![](images/clipboard-1762178135.png){width="688"}
+
+### Mapping vegetation in the Amazonian wetlands using object-based image analysis and decision tree classification
+
+This paper by [De Oliveira and Rossetti (2014)](https://www.tandfonline.com/doi/full/10.1080/01431161.2015.1060644#d1e140)\
+![](images/clipboard-779606411.png){width="399"}
+
 ## **Reflections**
 
 This week was dense. The topics where kind of abstract and sometimes I couldn't fully understand what was going on, but i got to understand the main ideas behind it. Doing the summary and reviewing the tables helped me to understand more but in general I think I'll understand it better once I start calculating my own accuracy in exercises. Still I am not sure if I'll get to need to do this kind of accuracy assessments at the most in-depth level once I graduate, but I think its a good idea to understand the basics so in case I encounter them in any paper or project I can understand what they mean and also not be so naive to believe in super high accuracies and always question what they really are assessing.

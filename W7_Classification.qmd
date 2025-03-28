@@ -75,6 +75,22 @@ Machine learning is a game-changer for remote sensing, particularly in regions w
 
 What stood out to me is how machine learning makes it possible to analyze and classify areas that might otherwise be impossible to map manually. In cities with rapid urbanization but little official data, these techniques can provide real-time insights that governments and researchers can act upon.
 
+### Detecting industrial oil palm plantations on Landsat images with Google Earth Engine 
+
+This paper by [Huay et al.(2016)](https://www.sciencedirect.com/science/article/pii/S235293851630129X)
+
+![](images/clipboard-4190448481.png)
+
+### Mapping Informal Settlements in Developing Countries using Machine Learning and Low Resolution Multi-spectral Data
+
+This paper by [Gram-Hansen et al.(2019)](https://dl.acm.org/doi/pdf/10.1145/3306618.3314253)
+
+![](images/clipboard-987288024.png)
+
+*Predictions of informal settlements (white pixels) in Kibera, Nairobi. Left: The CCF prediction of informal settlements
+in Kibera on low-resolution Sentinel-2 spectral imagery. Middle: Deep learning based prediction of informal settlements in
+Kibera, trained on VHR imagery. Right: The ground truth informal settlement mask for Kibera.*
+
 ## **Reflections**
 
 This week was honestly mind blowing. Since I’m not taking the CASA06 module (which goes deeper into ML), I hadn’t really explored all the different Machine Learning and classification techniques before. This felt like a great introduction to not just to the methods themselves, but also to how they can be applied to remote sensing.

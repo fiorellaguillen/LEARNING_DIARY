@@ -14,7 +14,7 @@ One thing to mention is that GEE runs on JavaScript, which sounds intimidating a
 Also, some words to keep in mind when working in GEE have been summarized here:
 
 | GEE Elements        | Meaning                                             |
-|---------------------|-----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | *Image*             | Raster                                              |
 | *Feature*           | Vector                                              |
 | *ImageCollection*   | A stack of images                                   |
@@ -46,6 +46,10 @@ In the practical, we applied these concepts to the city of Delhi, but I also dec
 
 GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.
 
+![](images/clipboard-2519461712.png){width="749"}
+
+[Source](https://developers.google.com/earth-engine/datasets/tags/agriculture)
+
 Some key application areas:
 
 -   **Environmental Monitoring**: Analyzing land cover changes, deforestation, and water body dynamics.
@@ -59,6 +63,14 @@ Some key application areas:
 -   **Air Quality & Climate**: Analyzing pollution patterns and long-term climate trends.
 
 There’s also the possibility of integrating GEE with machine learning models for tasks like land classification and object detection. And on top of all that, GEE even allows us to build interactive web applications, definitely something I am looking to try as I am also taking the CASA25 module.
+
+### Analysis of changes in rivers planforms using GEE
+
+This paper by [Tobón and Cañón (2019)](https://www.tandfonline.com/doi/full/10.1080/01431161.2020.1792575?needAccess=true#abstract)
+
+![](images/clipboard-2524360598.png){width="771"}
+
+*Figure 6. Example of methods for surface water delimitation in two river reaches: AWEI in (a) Landsat and (b) Sentinel; NDWI in (c) Landsat and (d) Sentinel; MNDWI in (e) Landsat and (f) Sentinel. The same quadrants used for Landsat and Sentinel*
 
 ## **Reflections**
 

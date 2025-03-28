@@ -61,7 +61,24 @@ SAR has a broad range of applications, especially for monitoring **environmental
 
 **Conflict and disaster damage assessment** – As seen in Ollie’s work, SAR can detect structural damage in war zones or after natural disasters.
 
-One area that really caught my interest is hydrology. I’ve previously analyzed river changes over time and noticed seasonal variations. SAR could provide a new way to study this, potentially detecting flood patterns and long-term riverbed shifts. However, this would likely require phase data, which isn’t available in GEE, so I’d have to explore other tools.
+One area that really caught my interest is hydrology. I’ve previously analyzed river changes over time and noticed seasonal variations. SAR could provide a new way to study this, potentially detecting flood patterns and long-term riverbed shifts. However, this would likely require phase data, which isn’t available in GEE, so I’d have to explore other tools..
+
+### Detection of flooded urban areas in high resolution Synthetic Aperture Radar images using double scattering
+
+This paper by [Mason et al.(2014)](https://www.sciencedirect.com/science/article/pii/S0303243413001700)
+
+![](images/clipboard-4257536482.png)
+
+### Mapping and Monitoring Surface Water and Wetlands with Synthetic Aperture Radar
+
+This paper by [Brisco (2015)](https://www.researchgate.net/profile/B-Brisco/publication/271765042_Remote_Sensing_of_Wetlands_Applications_and_Advances/links/59e4b1e1a6fdcc7154e140aa/Remote-Sensing-of-Wetlands-Applications-and-Advances.pdf)
+
+![](images/clipboard-3422798739.png)
+
+![](images/clipboard-2596357826.png)*Change in double-bounce scattering between June 6 and August 17, 2008, RADARSAT-2
+polarimetric data for Dongting Lake, China and the surrounding area. This is due to the change in SAR
+scattering mechanisms as the water level drops after snowmelt runoff ceases and the vegetation is no longer
+flooded.*
 
 ## **Reflections**
 

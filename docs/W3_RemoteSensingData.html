@@ -195,8 +195,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> <strong>Summary</strong></a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4.2</span> <strong>Applications</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms"><span class="header-section-number">4.1.1</span> Key terms</a></li>
+  <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="header-section-number">4.1.2</span> Corrections:</a></li>
+  <li><a href="#enhancements" id="toc-enhancements" class="nav-link" data-scroll-target="#enhancements"><span class="header-section-number">4.1.3</span> Enhancements:</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4.2</span> <strong>Applications</strong></a>
+  <ul class="collapse">
+  <li><a href="#multisensor-fusion-pansharpening-example" id="toc-multisensor-fusion-pansharpening-example" class="nav-link" data-scroll-target="#multisensor-fusion-pansharpening-example"><span class="header-section-number">4.2.1</span> Multisensor fusion: pansharpening example</a></li>
+  <li><a href="#textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" id="toc-textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" class="nav-link" data-scroll-target="#textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon"><span class="header-section-number">4.2.2</span> Textural images for improving land-cover classification in the Brazilian Amazon</a></li>
+  </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.3</span> <strong>Reflections</strong></a></li>
   </ul>
 </nav>
@@ -225,55 +234,160 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> <strong>Summary</strong></h2>
-<p>This week introduced a lot of new concepts related to corrections, data joining, and enhancements in remote sensing. To keep things clear for future reference, I organized them into categories and decided to do kind of a “dictionary” of these concepts, so it will be useful to understand them when reviewing literature and seeing applications of it.</p>
-<section id="key-terms" class="level4" data-number="4.1.0.1">
-<h4 data-number="4.1.0.1" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">4.1.0.1</span> <strong>Key Terms:</strong></h4>
-<ul>
-<li><p><strong>Irradiance</strong>: Radiation reaching Earth from the Sun</p></li>
-<li><p><strong>Radiance</strong>: Radiation leaving Earth toward the satellite</p></li>
-<li><p><strong>Reflectance</strong>: The proportion of incoming radiation reflected by a surface</p></li>
-<li><p><strong>Surface Reflectance</strong>: Reflectance at the bottom of the atmosphere (after atmospheric correction).</p></li>
-<li><p><strong>Analysis-ready data</strong>: Preprocessed images, usually in Surface Reflectance format (so we don’t have to do all the corrections ourselves!)</p></li>
-</ul>
+<p>This week introduced a lot of new concepts related to corrections, data joining, and enhancements in remote sensing. To keep things clear for future reference, I organized them into categories and decided to do kind of a “dictionary” of these concepts, so it will be useful to understand them when reviewing literature and seeing applications of them.</p>
+<p><em>Image 1. Quick summary of main concepts mentioned in class this week</em></p>
+<p><img src="images/clipboard-3007794880.png" class="img-fluid" width="493"></p>
+<section id="key-terms" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="key-terms"><span class="header-section-number">4.1.1</span> Key terms</h3>
+<p>So far many words have been repeated multiple times during lectures and papers I have reviewed and sometimes I still mix them up, so here they are summarised:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Irradiance</td>
+<td>Radiation reaching Earth from the Sun</td>
+</tr>
+<tr class="even">
+<td>Radiance</td>
+<td>Radiation leaving Earth toward the satellite</td>
+</tr>
+<tr class="odd">
+<td>Reflectance</td>
+<td>The proportion of incoming radiation reflected by a surface</td>
+</tr>
+<tr class="even">
+<td>Surface Reflectance</td>
+<td>Reflectance at the bottom of the atmosphere (after atmospheric correction)</td>
+</tr>
+<tr class="odd">
+<td>Analysis-ready data</td>
+<td>Preprocessed images, usually in Surface Reflectance format (so we don’t have to do all the corrections ourselves!)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Image 2. Illustration done to summarise the main terms used in Remote Sensing</em></p>
 <p><img src="images/clipboard-2014150389.jpeg" class="img-fluid" width="397"></p>
 </section>
-<section id="corrections" class="level4" data-number="4.1.0.2">
-<h4 data-number="4.1.0.2" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.0.2</span> <strong>Corrections:</strong></h4>
-<ul>
-<li><p><strong>Geometric correction</strong>: Aligns misaligned images using control points and regression (basically shifting everything so it matches properly). Useful for correcting historical maps to match modern spatial data.</p></li>
-<li><p><strong>Atmospheric correction</strong>: Removes distortions caused by atmospheric scattering (because the atmosphere its always there!).</p>
-<p>Methods include:</p>
-<ul>
-<li><p><strong>Dark Object Subtraction (DOS)</strong>: Finds something that should have zero reflectance and subtracts its measured value from all pixels</p></li>
-<li><p><strong>Pseudo-Invariant Features (PIFs)</strong>: Uses objects with stable reflectance over time as references for correction (great for long-term studies)</p></li>
-<li><p><strong>Flat correction</strong>: Uses field-measured values (without atmospheric interference) as a baseline for regression</p></li>
-</ul></li>
-<li><p><strong>Orthorectification</strong>: Fixes distortions from sensor tilt</p></li>
-<li><p><strong>Radiometric calibration</strong>: Converts Digital Number (DN) to spectral radiance to standardize measurements</p></li>
-</ul>
+<section id="corrections" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.2</span> Corrections:</h3>
+<p>This week we saw some of the corrections that raw sensor data could use before we start manipulating it. Most of them are already applied to images we use, as we usually use Analysis-ready data, but I think knowing what kind of preprocessing images have is useful at least as a general knowledge or if we were to work on raw data(maybe needed if I were to work with drone imagery?).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Geometric correction</td>
+<td>Aligns misaligned images using control points and regression (basically shifting everything so it matches properly). Useful for correcting historical maps to match modern spatial data.</td>
+</tr>
+<tr class="even">
+<td>Atmospheric correction</td>
+<td>Removes distortions caused by atmospheric scattering (because the atmosphere its always there!)</td>
+</tr>
+<tr class="odd">
+<td>Dark Object Subtraction (DOS)</td>
+<td>Method for atmospheric correction that finds something that should have zero reflectance and subtracts its measured value from all pixels</td>
+</tr>
+<tr class="even">
+<td>Pseudo-Invariant Features (PIFs)</td>
+<td>Method for atmospheric correction that uses objects with stable reflectance over time as references for correction (great for long-term studies)</td>
+</tr>
+<tr class="odd">
+<td>Flat correction</td>
+<td>Method for atmospheric correction that uses field-measured values (without atmospheric interference) as a baseline for regression</td>
+</tr>
+<tr class="even">
+<td>Orthorectification</td>
+<td>Correction that fixes distortions from sensor tilt</td>
+</tr>
+<tr class="odd">
+<td>Radiometric calibration</td>
+<td>Converts Digital Number (DN) to spectral radiance to standardize measurements</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="enhancements" class="level4" data-number="4.1.0.3">
-<h4 data-number="4.1.0.3" class="anchored" data-anchor-id="enhancements"><span class="header-section-number">4.1.0.3</span> <strong>Enhancements:</strong></h4>
-<ul>
-<li><p><strong>Contrast adjustments</strong>: Modifies image appearance without changing data values (basically, just making it look better)</p></li>
-<li><p><strong>Band ratios</strong>: Dividing one band by another (e.g., NDVI for vegetation analysis)</p></li>
-<li><p><strong>Filtering</strong>: Can be low-pass (smoothing) or high-pass (highlighting edges, like for detecting buildings)</p></li>
-<li><p><strong>Principal Component Analysis (PCA)</strong>: Reduces dimensionality to capture the most variance (helps focus on key changes in images, but could loose some interpretability)</p></li>
-<li><p><strong>Texture analysis</strong>: Measures similarity between a pixel and its neighbors (useful for spotting urban areas or specific land features)</p></li>
-<li><p><strong>Image fusion &amp; pan-sharpening</strong>: Merges data from different sensors, often using high-resolution bands to sharpen lower-resolution images</p></li>
-</ul>
+<section id="enhancements" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="enhancements"><span class="header-section-number">4.1.3</span> Enhancements:</h3>
+<p>I would say enhancements are a way of transforming images using data that is already available in the image itself, to better show some features. Some of the methods are:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contrast adjustments</td>
+<td>Modifies image appearance without changing data values (basically, just making it look better)</td>
+</tr>
+<tr class="even">
+<td>Band ratios</td>
+<td>Dividing one band by another (e.g., NDVI for vegetation analysis)</td>
+</tr>
+<tr class="odd">
+<td>Filtering</td>
+<td>Can be low-pass (smoothing) or high-pass (highlighting edges, like for detecting buildings)</td>
+</tr>
+<tr class="even">
+<td>Principal Component Analysis (PCA)</td>
+<td>Reduces dimensionality to capture the most variance (helps focus on key changes in images, but could loose some interpretability)</td>
+</tr>
+<tr class="odd">
+<td>Texture analysis</td>
+<td>Measures similarity between a pixel and its neighbors (useful for spotting urban areas or specific land features)</td>
+</tr>
+<tr class="even">
+<td>Image fusion &amp; pansharpening</td>
+<td>Merges data from different sensors, often using high-resolution bands to sharpen lower-resolution images</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="applications" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> <strong>Applications</strong></h2>
+<section id="multisensor-fusion-pansharpening-example" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="multisensor-fusion-pansharpening-example"><span class="header-section-number">4.2.1</span> Multisensor fusion: pansharpening example</h3>
+<p>This paper by <a href="https://www.mdpi.com/1424-8220/20/24/7100">Siok et al.(2020)</a>,</p>
+<p><em>Image 3. On the left samples of the best high-spatial-images. On the right, samples of images in natural color composition after being enhanced with the best high-spatial-resolution image</em></p>
+<p><img src="images/clipboard-4145642814.png" class="img-fluid" width="252"></p>
 <p>These corrections and enhancements are essential for making sure remote sensing data is accurate and actually useful. For example, atmospheric corrections are super important for environmental monitoring, where we need consistent multi-temporal comparisons. Geometric corrections are crucial for historical imagery alignment, especially in change detection studies. Radiometric calibration ensures that sensor data is comparable across time and space.</p>
 <p>Enhancements also have a ton of applications in urban studies, agriculture, and disaster response. Band ratios (like NDVI) help in assessing vegetation health, while texture analysis is great for land-use classification. PCA is often used for detecting land-cover changes, highlighting major differences in multi-temporal images. Image fusion techniques improve spatial resolution, making high-precision mapping and infrastructure monitoring more effective.</p>
 <p>One interesting example is <strong>multi-sensor fusion</strong>, where high-resolution panchromatic images enhance low-resolution multispectral data to improve feature detection. A study titled <em>Multi-Sensor Fusion: A Simulation Approach to Pansharpening Aerial and Satellite Images</em> (MDPI, 2020) discusses different ways to sharpen images and extract better features using fusion techniques.</p>
 </section>
+<section id="textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon"><span class="header-section-number">4.2.2</span> Textural images for improving land-cover classification in the Brazilian Amazon</h3>
+<p>This paper by <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2014.980920#d1e206">Lu et al.&nbsp;(2014)</a></p>
+<p><em>Image 4. Illustration done to summarise the main terms used in Remote Sensing</em></p>
+<p><img src="images/clipboard-1445595291.png" class="img-fluid"></p>
+</section>
+</section>
 <section id="reflections" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> <strong>Reflections</strong></h2>
 <p>At first, learning about corrections and enhancements felt unnecessary as most modern datasets come preprocessed anyway. But after seeing the applications I think its worth knowing the possibilities we have and what we could do if we ever encounter raw data(maybe not even satellite data). Even if we end up using only Analysis-ready data, I now think it’s important to know what kind of process it has been through so we can assess it better and know what we are working with. Even though I now realise its importance, I found this week to be a bit overwhelming because of all the concepts, but after organizing everything, it started making sense. Some papers are still hard to follow with all their complex formulas, but at least now I have a better foundation to understand what’s going on, so I guess we are having progress!</p>
-<p>A couple things catched my attention this week. One thing that surprised me was how much regression is used in remote sensing. I always thought of regression as something for statistical modeling (like in CASA007), but it’s actually everywhere here, aligning images, calibrating radiance, enhancing quality, etc. The other one was seeing Andy’s fieldwork for atmospheric correction which seems pretty cool. It made me think that sometimes we might need higher levels of precision for our images and its interesting to see all the options we have available to handle that.</p>
+<p>A couple things caught my attention this week. One thing that surprised me was how much regression is used in remote sensing. I always thought of regression as something for statistical modeling (like in CASA007), but it’s actually everywhere here, aligning images, calibrating radiance, enhancing quality, etc. The other one was seeing Andy’s fieldwork for atmospheric correction which seems pretty cool. It made me think that sometimes we might need higher levels of precision for our images and its interesting to see all the options we have available to handle that.</p>
 
 
 </section>

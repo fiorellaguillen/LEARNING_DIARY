@@ -1,4 +1,19 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
+De Oliveira and Rossetti, D. de F. (2015) ‘Mapping vegetation in a late Quaternary landform of the Amazonian wetlands using object-based image analysis and decision tree classification’, *International Journal of Remote Sensing*, 36(13), pp. 3397–3422. Available at: <https://doi.org/10.1080/01431161.2015.1060644>.
+
+Fallatah, A. *et al.* (2019) ‘Mapping informal settlement indicators using object-oriented analysis in the Middle East’, *International Journal of Digital Earth*, 12(7), pp. 802–824. Available at: <https://doi.org/10.1080/17538947.2018.1485753>.
+
+Gram-Hansen, B.J. *et al.* (2019) ‘Mapping Informal Settlements in Developing Countries using Machine Learning and Low Resolution Multi-spectral Data’, in *Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society*. New York, NY, USA: Association for Computing Machinery (AIES ’19), pp. 361–368. Available at: <https://doi.org/10.1145/3306618.3314253>.
+
+Howe, A.A. *et al.* (2022) ‘Comparing Sentinel-2 and Landsat 8 for Burn Severity Mapping in Western North America’, *Remote Sensing*, 14(20), p. 5249. Available at: <https://doi.org/10.3390/rs14205249>.
+
+Lee, J.S.H. *et al.* (2016) ‘Detecting industrial oil palm plantations on Landsat images with Google Earth Engine’, *Remote Sensing Applications: Society and Environment*, 4, pp. 219–224. Available at: <https://doi.org/10.1016/j.rsase.2016.11.003>.
+
+Lu, D. *et al.* (2014) ‘The roles of textural images in improving land-cover classification in the Brazilian Amazon’, *International Journal of Remote Sensing*, 35(24), pp. 8188–8207. Available at: <https://doi.org/10.1080/01431161.2014.980920>.
+
+Mason, D.C. *et al.* (2014) ‘Detection of flooded urban areas in high resolution Synthetic Aperture Radar images using double scattering’, *International Journal of Applied Earth Observation and Geoinformation*, 28, pp. 150–159. Available at: <https://doi.org/10.1016/j.jag.2013.12.002>.
+
+‘(PDF) “Remote Sensing of Wetlands: Applications and Advances”’ (no date) in *ResearchGate*. Available at: <https://www.researchgate.net/publication/271765042_Remote_Sensing_of_Wetlands_Applications_and_Advances> (Accessed: 28 March 2025).
+
+Siok, K., Ewiak, I. and Jenerowicz, A. (2020) ‘Multi-Sensor Fusion: A Simulation Approach to Pansharpening Aerial and Satellite Images’, *Sensors*, 20(24), p. 7100. Available at: <https://doi.org/10.3390/s20247100>.

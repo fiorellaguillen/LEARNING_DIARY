@@ -152,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./W4_Policy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">An Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -230,15 +230,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="summary" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> <strong>Summary</strong></h2>
 <p>This session could be divided in two main topics. On one side (and also the one i felt was easier to understand) was continuing seeing alternatives to image classification, including some preclassified datasets like MODIS or Dynamic World. The other part (which for me was a bit difficult to understand) covered key concepts in classification accuracy assessment, cross-validation techniques, the impact of spatial autocorrelation, and spatial cross validation.</p>
-<p>For the first part, we got deeper on Dynamic World which is a open-access semisupervised model with already preprocessed data to obtain info on tree cover, built index, etc, that is continously being updated. Something interesting it that it uses Convolutional Neural Networks, which is a form of deep learning that uses a moving window for classification. Some cons would be that its not too detailed, has some inaccuracies because of using TOA reflectance and lacks interpretability.</p>
+<p>For the first part, we got deeper on Dynamic World which is a open-access semisupervised model with already preprocessed data to obtain info on tree cover, built index, etc, that is continuously being updated. Something interesting it that it uses Convolutional Neural Networks, which is a form of deep learning that uses a moving window for classification. Some cons would be that its not too detailed, has some inaccuracies because of using TOA reflectance and lacks interpretability.</p>
 <p>We also saw alternatives to classification techniques like:</p>
-<p>OBIA: Object based image analysis : instead of classifying cells, segments images in meaningul shape based on similarity, called superpixels and then classifies. It uses SLIC which is a method to refine classification that checks for homogenity of colors and closeness to center</p>
-<p>Subpixel analysis: recognizes that one pixel might include multiple land cover types so we could calculate the proportion of each pixel corresponding to each class. it is computed usingmatrix inversion techniques, with each fraction summing to one.</p>
-<p>Then moving to <strong>accuracy assessment</strong>. First of all I found this table to be the basis of all next concepts</p>
-<p>*Graph on true positive, true negative, false positive, false negative</p>
+<p><strong>OBIA:</strong> Object based image analysis. Instead of classifying cells, segments images in meaningul shape based on similarity, called superpixels and then classifies. It uses SLIC which is a method to refine classification that checks for homogeneity of colors and closeness to center</p>
+<p><strong>Subpixel analysis:</strong> recognizes that one pixel might include multiple land cover types so we could calculate the proportion of each pixel corresponding to each class. It is computed using matrix inversion techniques, with each fraction summing to one.</p>
+<p>Then moving to <strong>accuracy assessment</strong>. First of all I found this table to be the basis of all next concepts:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2389446141.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="490"></p>
+</figure>
+</div>
+<p><a href="https://andrewmaclachlan.github.io/CASA0023-lecture-7/?panelset_002=data2#22">Source</a></p>
 <p>So, there are many indexes to measure accuracy</p>
 <p>PA: Producer accuracy : true positive and false negative rate</p>
-<p>UA: User accuracy: true positive and false positive</p>
+<p>UA: User accuracy: true positive and false positive rate</p>
 <p>OA: Overall accuracy: true positive and true negative compared to all classifications</p>
 <p>Errors of omission: 100 - PA</p>
 <p>Errors of Comission: 100 - UA</p>

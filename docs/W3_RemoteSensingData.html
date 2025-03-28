@@ -205,6 +205,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#multisensor-fusion-pansharpening-example" id="toc-multisensor-fusion-pansharpening-example" class="nav-link" data-scroll-target="#multisensor-fusion-pansharpening-example"><span class="header-section-number">4.2.1</span> Multisensor fusion: pansharpening example</a></li>
   <li><a href="#textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" id="toc-textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" class="nav-link" data-scroll-target="#textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon"><span class="header-section-number">4.2.2</span> Textural images for improving land-cover classification in the Brazilian Amazon</a></li>
+  <li><a href="#some-thoughts" id="toc-some-thoughts" class="nav-link" data-scroll-target="#some-thoughts"><span class="header-section-number">4.2.3</span> <strong>Some thoughts:</strong></a></li>
   </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">4.3</span> <strong>Reflections</strong></a></li>
   </ul>
@@ -275,7 +276,11 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p><em>Image 2. Illustration done to summarise the main terms used in Remote Sensing</em></p>
-<p><img src="images/clipboard-2014150389.jpeg" class="img-fluid" width="397"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2014150389.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="397"></p>
+</figure>
+</div>
 </section>
 <section id="corrections" class="level3" data-number="4.1.2">
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="corrections"><span class="header-section-number">4.1.2</span> Corrections:</h3>
@@ -368,34 +373,36 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> <strong>Applications</strong></h2>
+<p>For this applications section, I decided to look into two ways of enhancing remote sensing data to understand better how to leverage them. One using multisensor fusion (pansharpening) and the other using textural images to enhance land-cover classification. Both methods aimed to get more useful information out of satellite images, but they do it in very different ways.</p>
 <section id="multisensor-fusion-pansharpening-example" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="multisensor-fusion-pansharpening-example"><span class="header-section-number">4.2.1</span> Multisensor fusion: pansharpening example</h3>
-<p>This paper by <a href="https://www.mdpi.com/1424-8220/20/24/7100">Siok et al.(2020)</a>,</p>
+<p>In this research by <a href="https://www.mdpi.com/1424-8220/20/24/7100">Siok et al.(2020)</a>, pansharpening was used to enhance the spatial resolution of multispectral images by combining them with higher-resolution panchromatic images. The goal was to improve the clarity and detail of the images while preserving their spectral information. The study compared different pansharpening techniques to assess their effectiveness in maintaining color accuracy and spatial sharpness. Their results showed that certain methods performed better than others, depending on the specific application and the type of satellite data used and also that the effectiveness varied by land cover type, where forests had the least improvement.</p>
 <p><em>Image 3. On the left samples of the best high-spatial-images. On the right, samples of images in natural color composition after being enhanced with the best high-spatial-resolution image</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-4145642814.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="370"></p>
 </figure>
 </div>
-<p>These corrections and enhancements are essential for making sure remote sensing data is accurate and actually useful. For example, atmospheric corrections are super important for environmental monitoring, where we need consistent multi-temporal comparisons. Geometric corrections are crucial for historical imagery alignment, especially in change detection studies. Radiometric calibration ensures that sensor data is comparable across time and space.</p>
-<p>Enhancements also have a ton of applications in urban studies, agriculture, and disaster response. Band ratios (like NDVI) help in assessing vegetation health, while texture analysis is great for land-use classification. PCA is often used for detecting land-cover changes, highlighting major differences in multi-temporal images. Image fusion techniques improve spatial resolution, making high-precision mapping and infrastructure monitoring more effective.</p>
-<p>One interesting example is <strong>multi-sensor fusion</strong>, where high-resolution panchromatic images enhance low-resolution multispectral data to improve feature detection. A study titled <em>Multi-Sensor Fusion: A Simulation Approach to Pansharpening Aerial and Satellite Images</em> (MDPI, 2020) discusses different ways to sharpen images and extract better features using fusion techniques.</p>
 </section>
 <section id="textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="textural-images-for-improving-land-cover-classification-in-the-brazilian-amazon"><span class="header-section-number">4.2.2</span> Textural images for improving land-cover classification in the Brazilian Amazon</h3>
-<p>This paper by <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2014.980920#d1e206">Lu et al.&nbsp;(2014)</a></p>
-<p><em>Image 4. Illustration done to summarise the main terms used in Remote Sensing</em></p>
+<p>This study by <a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2014.980920#d1e206">Lu et al.&nbsp;(2014)</a> explores how textural images from different satellite sensors can improve land-cover classification, particularly in the Brazilian Amazon. The researchers analyzed images from different sensor which have different spatial resolutions, to determine how texture affects classification accuracy. They used a GLCM texture model, and found that adding textural images to radiometric data can enhance classification, especially for high-resolution sensors. Some of their key findings were that not all textures are equally useful and that the best results come from combining two textural images rather than using many, and the ideal texture combinations vary by sensor. Overall, they found that while spectral data remains more effective than texture for distinguishing land-cover types, texture significantly improves classification, especially at higher resolutions.</p>
+<p><em>Image 4. Textural images obtained from the SPOT panchromatic band based on different texture measures but the same window size (9&nbsp;×&nbsp;9) for Machadinho d’Oeste; (a), (b), (c), (d), (e), (f), (g), and (h) represent the textural images calculated using mean, variance, homogeneity, contrast, dissimilarity, entropy, second moment, and correlation coefficient, respectively.</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1445595291.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="370"></p>
 </figure>
 </div>
 </section>
+<section id="some-thoughts" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="some-thoughts"><span class="header-section-number">4.2.3</span> <strong>Some thoughts:</strong></h3>
+<p>Both studies showed that enhancing remote sensing images, whether by improving spatial resolution or adding texture, can really boost their usefulness. But what really stood out to me is that there’s no “one-size-fits-all” method. Some pansharpening techniques work better than others depending on the land cover, and not all textures are useful for classification or depend on what you are trying to classify or what type of remote sensing data you use. Also, it seems like higher resolution always helps, but only up to a point (so when does more detail stop being helpful?). Overall, it’s cool to see how much thought goes into picking the right enhancement techniques as I would have originally thought that it was something more standard.</p>
+</section>
 </section>
 <section id="reflections" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">4.3</span> <strong>Reflections</strong></h2>
-<p>At first, learning about corrections and enhancements felt unnecessary as most modern datasets come preprocessed anyway. But after seeing the applications I think its worth knowing the possibilities we have and what we could do if we ever encounter raw data(maybe not even satellite data). Even if we end up using only Analysis-ready data, I now think it’s important to know what kind of process it has been through so we can assess it better and know what we are working with. Even though I now realise its importance, I found this week to be a bit overwhelming because of all the concepts, but after organizing everything, it started making sense. Some papers are still hard to follow with all their complex formulas, but at least now I have a better foundation to understand what’s going on, so I guess we are having progress!</p>
-<p>A couple things caught my attention this week. One thing that surprised me was how much regression is used in remote sensing. I always thought of regression as something for statistical modeling (like in CASA007), but it’s actually everywhere here, aligning images, calibrating radiance, enhancing quality, etc. The other one was seeing Andy’s fieldwork for atmospheric correction which seems pretty cool. It made me think that sometimes we might need higher levels of precision for our images and its interesting to see all the options we have available to handle that.</p>
+<p>At first, learning about corrections felt unnecessary as most modern datasets come preprocessed anyway. But after the lecture I think it’s worth knowing the possibilities we have and what we could do if we ever encounter raw data(maybe not even satellite data). Even if we end up using only Analysis-ready data, I now think it’s important to know what kind of process it has been through so we can assess it better and know what we are working with. Enhancements, instead, felt like something I could be using more in my analysis, and I confirmed it specially after seeing the applications. I found them to be a great toolset to get more information from our images, but also something we need to choose case by case. Now, despite how important these concepts are, I still found this week to be a bit overwhelming because of all the concepts, but after organizing everything, it started making more sense. Some papers are still hard to follow with all their complex formulas, but at least now I have a better foundation to understand what’s going on, so I guess we are having progress!</p>
+<p>On another topics, a couple things caught my attention this week. One thing that surprised me was how much regression is used in remote sensing. I always thought of regression as something for statistical modeling (like in CASA007), but it’s actually everywhere here, aligning images, calibrating radiance, enhancing quality, etc. The other one was seeing Andy’s fieldwork for atmospheric correction which seems pretty cool. It made me think that sometimes we might need higher levels of precision for our images and its interesting to see all the options we have available to handle that.</p>
 
 
 </section>

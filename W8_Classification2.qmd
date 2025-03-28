@@ -7,23 +7,25 @@ format: html
 
 This session could be divided in two main topics. On one side (and also the one i felt was easier to understand) was continuing seeing alternatives to image classification, including some preclassified datasets like MODIS or Dynamic World. The other part (which for me was a bit difficult to understand) covered key concepts in classification accuracy assessment, cross-validation techniques, the impact of spatial autocorrelation, and spatial cross validation.
 
-For the first part, we got deeper on Dynamic World which is a open-access semisupervised model with already preprocessed data to obtain info on tree cover, built index, etc, that is continously being updated. Something interesting it that it uses Convolutional Neural Networks, which is a form of deep learning that uses a moving window for classification. Some cons would be that its not too detailed, has some inaccuracies because of using TOA reflectance and lacks interpretability.
+For the first part, we got deeper on Dynamic World which is a open-access semisupervised model with already preprocessed data to obtain info on tree cover, built index, etc, that is continuously being updated. Something interesting it that it uses Convolutional Neural Networks, which is a form of deep learning that uses a moving window for classification. Some cons would be that its not too detailed, has some inaccuracies because of using TOA reflectance and lacks interpretability.
 
 We also saw alternatives to classification techniques like:
 
-OBIA: Object based image analysis : instead of classifying cells, segments images in meaningul shape based on similarity, called superpixels and then classifies. It uses SLIC which is a method to refine classification that checks for homogenity of colors and closeness to center
+**OBIA:** Object based image analysis. Instead of classifying cells, segments images in meaningul shape based on similarity, called superpixels and then classifies. It uses SLIC which is a method to refine classification that checks for homogeneity of colors and closeness to center
 
-Subpixel analysis: recognizes that one pixel might include multiple land cover types so we could calculate the proportion of each pixel corresponding to each class. it is computed usingmatrix inversion techniques, with each fraction summing to one.
+**Subpixel analysis:** recognizes that one pixel might include multiple land cover types so we could calculate the proportion of each pixel corresponding to each class. It is computed using matrix inversion techniques, with each fraction summing to one.
 
-Then moving to **accuracy assessment**. First of all I found this table to be the basis of all next concepts
+Then moving to **accuracy assessment**. First of all I found this table to be the basis of all next concepts:
 
-\*Graph on true positive, true negative, false positive, false negative
+![](images/clipboard-2389446141.png){fig-align="center" width="490"}
+
+[Source](https://andrewmaclachlan.github.io/CASA0023-lecture-7/?panelset_002=data2#22)
 
 So, there are many indexes to measure accuracy
 
 PA: Producer accuracy : true positive and false negative rate
 
-UA: User accuracy: true positive and false positive
+UA: User accuracy: true positive and false positive rate
 
 OA: Overall accuracy: true positive and true negative compared to all classifications
 

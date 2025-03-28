@@ -15,9 +15,7 @@ Similarly to optimal imagery, it has multiple bands, each one being the result o
 
 **L band and P band:** Has a longer wavelength. It can penetrate through some objects and generate double bounce scattering
 
-![](images/clipboard-1780670888.png)
-
-SAR also has *polarizations*, which is the orientation of the plane in which the waves move. Meanwhile, objects have a *scattering mechanism*, which is the way that objects reflects the radar signal. Scattering mechanisms are a really important dimension in SAR, analogous to the color of images in optical imagery. Their types can be:
+![](images/clipboard-499675549.png)SAR also has *polarizations*, which is the orientation of the plane in which the waves move. Meanwhile, objects have a *scattering mechanism*, which is the way that objects reflects the radar signal. Scattering mechanisms are a really important dimension in SAR, analogous to the color of images in optical imagery. Their types can be:
 
 Polarization:
 

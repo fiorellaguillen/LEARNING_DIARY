@@ -1,23 +1,29 @@
 ---
-title: "An Introduction to Remote Sensing"
+title: "Policy"
 format: html
 ---
 
 ## **Summary**
 
-The *Plan Integral de Reconstrucción con Cambios* (PIRCC) is a strategy developed by the Peruvian government to rebuild and strengthen areas affected by *El Niño Costero*. Its goal is not just to repair damaged infrastructure but also to make communities more resilient against future disasters. The plan promotes sustainable urban development and better risk management, recognizing that prevention is more effective than post-disaster reconstruction. Also, given the increasing impact of climate change, the PIRCC highlights the need to prepare for extreme weather events rather than just reacting to them.
+The *Plan Integral de Reconstrucción con Cambios* (PIRCC) is a strategy developed by the Peruvian government to rebuild and strengthen areas affected by *El Niño Costero,* a meteorological phenomenon that recurrently affects Peru due to the change in the sea temperature. Its goal is not just to repair damaged infrastructure but also to make communities more resilient against future disasters. The plan promotes sustainable urban development and better risk management, recognizing that prevention is more effective than post-disaster reconstruction. Also, given the increasing impact of climate change, the PIRCC highlights the need to prepare for extreme weather events rather than just reacting to them.
+
+*Image 1. Sea surface temperatures on April 4, 2023 in the coast of Peru during El Niño phenomenon.*
 
 ![](images/clipboard-35216451.png){fig-align="center" width="700"}
 
 [Source](https://earthobservatory.nasa.gov/images/151183/warming-water-and-downpours-in-peru)
 
+*Image 2. Damage caused by excessive rainfall due to the El Niño phenomenon in Peru*
+
 ![](images/clipboard-545088712.png){fig-align="center" width="700"}
 
 [Source](https://ojo-publico.com/401/las-terribles-cifras-del-nino-costero-nivel-nacional)
 
-![](images/clipboard-2145067034.png){fig-align="center" width="700"}
-
 That said, while the plan includes prevention measures, these have mostly focused on building flood defenses, dikes, and urban development plans for affected cities, but is missing a set of tools to better inform the location of these projects from a data-driven approach, and that overall, allow long-term risk monitoring, including tools that could provide real-time data and analysis to guide urban planning and infrastructure decisions. Without that, rebuilding efforts might not be too strategic, and could have less accuracy, reducing that way its effectiveness to prevent future natural phenomena.
+
+*Image 3. PIRCC's budget allocation showing that most of it is dedicated to rebuilding and a very small percentage for development of long-term planning strategies*
+
+![](images/clipboard-2145067034.png){fig-align="center" width="750"}
 
 ## **Applications**
 
@@ -29,8 +35,6 @@ With this application, we could shift towards a more data-driven approach to dis
 
 ## **Reflections**
 
-Through this brief, I could understand how to link what we are learning on Earth Observation, to planning urban development, which is related to my background as an urban planner. Also, having a critical analysis of the policy, it made me realize that they are lacking some important data that could improve its effectiveness.
+Through this brief, I could understand how to link what we are learning on Earth Observation, to planning urban development, which is related to my background as an urban planner. Also, having a critical analysis of the policy, it made me realize that they are lacking some important data that could improve its effectiveness. Through the application, I consider satellite imagery can be leveraged to address specific challenges posed by El Niño, and can better anticipate future risks, making the PIRCC more effective and sustainable in the long term. However I found quite worrying that this huge project, that it using a great amount of the government's money, didn't include this kind of remote sensing tools already, and I am wondering how much money we could be saving by making more efficient data-informed decisions.
 
-Through the application, I consider satellite imagery can be leveraged to address specific challenges posed by El Niño, and can better anticipate future risks, making the PIRCC more effective and sustainable in the long term.
-
-Additionally, through this exercise, I’ve recognized the importance of collaboration between different data sources, such as satellite imagery and ground-level assessments, to create a comprehensive view of the situation. Also, it’s clear that while remote sensing can provide invaluable insights, it must be combined with local knowledge and community engagement to ensure that the data is used effectively in shaping policies and practices on the ground.
+Additionally, through this exercise, I’ve recognized the importance of collaboration between different data sources, such as satellite imagery and ground level assessments, to create a comprehensive view of the situation. Also, it’s clear that while remote sensing can provide invaluable insights, it must be combined with local knowledge and community engagement to ensure that the data is used effectively in shaping policies and practices on the real world.

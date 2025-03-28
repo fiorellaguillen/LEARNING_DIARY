@@ -73,7 +73,7 @@ This week, what stood out to me is how machine learning makes it possible to ana
 
 This week, what stood out to me is how machine learning makes it possible to analysis and classificy of areas that would be nearly impossible to map manually. This can be especially useful for governments to monitor and identify regions that require intervention but often lack the resources to do so. With that in mind, this week's focus is on applications that can help local governments monitor critical areas and could potentially help natural resource protection, and urban planning or aid distribution.
 
-### Detecting industrial oil palm plantations on Landsat images with Google Earth Engine 
+### Detecting industrial oil palm plantations on Landsat images with Google Earth Engine
 
 This paper by [Huay et al.(2016)](https://www.sciencedirect.com/science/article/pii/S235293851630129X) explored how GEE could be used as a low cost, accessible tool to detect industrial oil palm plantations using Landsat 8 satellite imagery. The research focused on Tripa, Indonesia, and tested different spectral bands (RGB, NIR, SWIR, etc.) to classify land cover types like forests, water, and oil palm. Different machine learning algorithms were used and *Classification and Regression Trees (CART)* and *Random Forests*, where the ones with better performance for this task. The study also found that pixel based classification has limitations, especially in distinguishing oil palm from similar land covers, and mentioned it would be useful to improve this classification in the future using object-based classification and SAR imagery.
 

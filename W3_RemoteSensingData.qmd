@@ -16,7 +16,7 @@ This week introduced a lot of new concepts related to corrections, data joining,
 So far many words have been repeated multiple times during lectures and papers I have reviewed and sometimes I still mix them up, so here they are summarised:
 
 | Term | Meaning |
-|----|----|
+|------------------------------------|------------------------------------|
 | Irradiance | Radiation reaching Earth from the Sun |
 | Radiance | Radiation leaving Earth toward the satellite |
 | Reflectance | The proportion of incoming radiation reflected by a surface |
@@ -32,7 +32,7 @@ So far many words have been repeated multiple times during lectures and papers I
 This week we saw some of the corrections that raw sensor data could use before we start manipulating it. Most of them are already applied to images we use, as we usually use Analysis-ready data, but I think knowing what kind of preprocessing images have is useful at least as a general knowledge or if we were to work on raw data(maybe needed if I were to work with drone imagery?).
 
 | Term | Meaning |
-|----|----|
+|------------------------------------|------------------------------------|
 | Geometric correction | Aligns misaligned images using control points and regression (basically shifting everything so it matches properly). Useful for correcting historical maps to match modern spatial data. |
 | Atmospheric correction | Removes distortions caused by atmospheric scattering (because the atmosphere its always there!) |
 | Dark Object Subtraction (DOS) | Method for atmospheric correction that finds something that should have zero reflectance and subtracts its measured value from all pixels |
@@ -46,7 +46,7 @@ This week we saw some of the corrections that raw sensor data could use before w
 I would say enhancements are a way of transforming images using data that is already available in the image itself, to better show some features. Some of the methods are:
 
 | Term | Meaning |
-|----|----|
+|------------------------------------|------------------------------------|
 | Contrast adjustments | Modifies image appearance without changing data values (basically, just making it look better) |
 | Band ratios | Dividing one band by another (e.g., NDVI for vegetation analysis) |
 | Filtering | Can be low-pass (smoothing) or high-pass (highlighting edges, like for detecting buildings) |

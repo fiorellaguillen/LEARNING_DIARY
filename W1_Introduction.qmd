@@ -37,6 +37,8 @@ While reviewing different papers I found it difficult to find one that when comp
 
 ![](images/clipboard-3526141123.png){fig-align="center" width="334"}
 
+### Some thoughts
+
 After checking these two papers and also reviewing some others, I can tell that it's true that Sentinel 2 can be a great option(and very popular as well, maybe also because its newer?) because of its spatial and temporal resolution, for many types of applications that could be analysed with its available bands. But we can't generalize it as THE best option as, sometimes, like in the second paper, we might require some kind of information that only Landsat has, like in this case Thermal Infrared.
 
 ## **Reflections**

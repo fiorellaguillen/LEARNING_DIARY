@@ -9,12 +9,14 @@ This week, we finally started using Google Earth Engine (GEE), and honestly, it 
 
 One thing to mention is that GEE runs on JavaScript, which sounds intimidating at first, but so far, we’ve only used relatively simple commands, so it’s not that bad. I have summarized some of the main things to remember when using Javascript in GEE, in the following image:
 
+*Image 1:* *Main JavaScript features to keep in mind when using GEE*
+
 ![](images/w6_javascript.png){fig-align="center" width="600"}
 
 Also, some words to keep in mind when working in GEE have been summarized here:
 
 | GEE Elements        | Meaning                                             |
-|---------------------|-----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | *Image*             | Raster                                              |
 | *Feature*           | Vector                                              |
 | *ImageCollection*   | A stack of images                                   |
@@ -38,13 +40,15 @@ Other important concepts:
 
 In the practical, we applied these concepts to the city of Delhi, but I also decided to analyze a Peruvian city following the same steps. It was interesting to apply the techniques in a familiar context, though I encountered limitations, such as needing to increase the cloud presence threshold to obtain enough images. But overall it was amazing to finally use GEE and see how fast and practical it was to load the data for anywhere in the world and run the analysis.
 
-*Image 1:* *PCA analysis of Iquitos, Peru*
+*Image 2:* *PCA analysis of Iquitos, Peru*
 
 ![](images/w6_iquitos.png){fig-align="center"}
 
 ## **Applications**
 
 One of the things that amazed me the most this week was GEE’s massive satellite data catalog, which opens the door for a huge range of applications. So for this week's entry instead of focusing on two different research, I decided to change it a bit and first give a general overview of some of the datasets in the catalog that I found more interesting so I can have them on hand for future referece.
+
+*Image 3: Five selected datasets available in GEE*
 
 ![](images/gee_app.png){fig-align="center"}
 

@@ -5,7 +5,7 @@ project:
 book:
   title: "CASA0023 Learning Diary"
   author: "Fiorella Guillen"
-  date: "28/03/2025"
+  date: "`r Sys.Date()`"
   navbar:
      logo: "images/casa_logo.jpg"
      collapse: true

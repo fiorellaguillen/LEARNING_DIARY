@@ -11,13 +11,15 @@ Similarly to optimal imagery, it has multiple bands, each one being the result o
 
 **C band:** The most useful and used SAR band (e.g. Sentinel 1). Has a good balance of resolution and penetration and generates volume scattering
 
-**X band:** Has a shorter wavelength so it's very easy to scatter meanign it just bounces and generates a rough surface
+**X band:** Has a shorter wavelength so it's very easy to scatter meaning it just bounces and generates a rough surface
 
 **L band and P band:** Has a longer wavelength. It can penetrate through some objects and generate double bounce scattering
 
+*Image 1. Different bands available in SAR imagery*
+
 ![](images/clipboard-499675549.png)SAR also has *polarizations*, which is the orientation of the plane in which the waves move. Meanwhile, objects have a *scattering mechanism*, which is the way that objects reflects the radar signal. Scattering mechanisms are a really important dimension in SAR, analogous to the color of images in optical imagery. Their types can be:
 
-Polarization:
+**Polarization:**
 
 -   **VV (Vertical-Vertical):** Sensitive to rough surfaces and water bodies. \*
 
@@ -25,7 +27,9 @@ Polarization:
 
 -   **HH (Horizontal-Horizontal):** Picks up double-bounce reflections, often seen in urban areas.
 
-Scattering mechanisms:
+*\*This are the only ones available in Sentinel 1*
+
+**Scattering mechanisms:**
 
 -   **Rough surface scattering** – Common in open terrain, chaotic reflections. Very visible in VV polarization
 
@@ -33,55 +37,45 @@ Scattering mechanisms:
 
 -   **Double bounce scattering** – Happens with vertical structures like buildings. Mostly sensitive in HH polarization
 
-\*Currently we only have access to VH and VV in Sentinel 1
-
 The types of information we get from SAR sensor are amplitude (backscatter) and phase
 
--   **Amplitude (Backscatter):** Measures the "loudness" of the returned signal, useful for texture analysis.
-
-<!-- -->
-
--   **Phase:** Measures when is the reflected signal received. It allows us to measure distance to the ground and change detection over time, but it’s not available in Google Earth Engine (GEE).
+-   **Amplitude (Backscatter):** Measures the "loudness" of the returned signal, useful for texture analysis
+-   **Phase:** Measures when is the reflected signal received. It allows us to measure distance to the ground and change detection over time, but it’s not available in Google Earth Engine (GEE)
 
 Althought SAR is a bit less useful for classification, one of its biggest strengths is **change detection**. Since SAR isn’t affected by cloud cover or lighting conditions, it's more consistent and provides a reliable way to track changes in landscapes and infrastructure. A basic approach is subtracting two SAR images to highlight differences, though this doesn’t work well in areas with constant change (e.g. construction sites). Another way of approaching it was Ollie’s research on building damage detection using SAR. His method analyzed the variance in backscatter before and after a war, identifying changes outside the normal range of variation by evaluating the standard deviation of each pixel before and after war to detect changes outside of the normal noisiness/change. It was interesting to see that his statistical change detection, even though is simpler than using other Machine Learning methods, had a better performance, but makes sense as in this case of crisis scenarios you usually don't have pretrained data that can help calibrate ML models.
 
+*Image 2. Ollie's research on building damage detection using SAR, showing how the mean values in SAR changed dramatically after the war started*
+
+![](images/clipboard-4081896059.png){fig-align="center"}
+
 ## **Applications**
 
-SAR has a broad range of applications, especially for monitoring **environmental changes, infrastructure, and disasters**. Some key uses include:
-
-**Deforestation tracking** – SAR can detect forest loss even under cloud cover.
-
-**Flood monitoring** – Water surfaces have a distinct SAR signature, making it useful for disaster response.
-
-**Urban development mapping** – Double-bounce scattering helps identify buildings and structural changes.
-
-**Glacier and ice sheet analysis** – SAR can penetrate snow and ice to monitor thickness changes.
-
-**Conflict and disaster damage assessment** – As seen in Ollie’s work, SAR can detect structural damage in war zones or after natural disasters.
-
-One area that really caught my interest is hydrology. I’ve previously analyzed river changes over time and noticed seasonal variations. SAR could provide a new way to study this, potentially detecting flood patterns and long-term riverbed shifts. However, this would likely require phase data, which isn’t available in GEE, so I’d have to explore other tools..
+This week I decided to review two case studies that used SAR (Synthetic Aperture Radar) for monitoring environmental conditions, particularly urban flooding and wetlands. I think these topics are really related to my interests and I could use them for future reference as I have an interest in urban resilience and environmental management, especially in areas vulnerable to climate change.
 
 ### Detection of flooded urban areas in high resolution Synthetic Aperture Radar images using double scattering
 
-This paper by [Mason et al.(2014)](https://www.sciencedirect.com/science/article/pii/S0303243413001700)
+This paper by [Mason et al.(2014)](https://www.sciencedirect.com/science/article/pii/S0303243413001700) looks at urban flooding detection using SAR. It focuses on detecting flooded areas in urban environments, where traditional methods often struggle due to the interference of buildings causing shadows or cloud coverage. The study shows how *double scattering* between the flooded ground and adjacent buildings can be used to identify flooding, even in regions that are typically hard to detect with standard SAR. The results demonstrated that this method, particularly when combined with LiDAR data, was highly successful in spotting urban floods with great accuracy. I particularly found this one interesting because when trying my own ideas in GEE I usually struggle finding satellite images for peruvian cities with lower cloud coverage as Peru has some coastal and tropical weathers that usually make it cloudy, so maybe SAR is something I can try now.
 
-![](images/clipboard-4257536482.png)
+*Image 3 (a1)Flood image (July 25, 2007) and (b1) reference image (July 22, 2008). (a2) Zoomed flood image and (b2) zoomed reference image*
+
+![](images/clipboard-4257536482.png){fig-align="center" width="700"}
 
 ### Mapping and Monitoring Surface Water and Wetlands with Synthetic Aperture Radar
 
-This paper by [Brisco (2015)](https://www.researchgate.net/profile/B-Brisco/publication/271765042_Remote_Sensing_of_Wetlands_Applications_and_Advances/links/59e4b1e1a6fdcc7154e140aa/Remote-Sensing-of-Wetlands-Applications-and-Advances.pdf)
+This paper by [Brisco (2015)](https://www.researchgate.net/profile/B-Brisco/publication/271765042_Remote_Sensing_of_Wetlands_Applications_and_Advances/links/59e4b1e1a6fdcc7154e140aa/Remote-Sensing-of-Wetlands-Applications-and-Advances.pdf) evaluates wether monitoring surface water and wetlands with SAR is an effective method. It states the importance of tracking water resources, especially in areas experiencing stress and considers SAR as a useful way to monitor changes in surface water levels and wetlands. By using SAR data in combination with land cover maps and DEM (Digital Elevation Models). The results of this study shows that SAR in combination with other images (forming a multisource image) can help track seasonal or annual changes in wetlands, such as flooding or vegetation changes, more effectively than using only optical imagery and are a state-of-the-art option. But also mentions some limitations or things to consider like how important it is to take care of different scales and resolutions involved in multisource images.
 
-![](images/clipboard-3422798739.png)
+*Image 4 Change in double-bounce scattering between June 6 and August 17, 2008,* *in Dongting Lake, China and the surrounding area. This is due to the change in SAR scattering mechanisms as the water level drops after snowmelt runoff ceases and the vegetation is no longer flooded.*
 
-![](images/clipboard-2596357826.png)*Change in double-bounce scattering between June 6 and August 17, 2008, RADARSAT-2
-polarimetric data for Dongting Lake, China and the surrounding area. This is due to the change in SAR
-scattering mechanisms as the water level drops after snowmelt runoff ceases and the vegetation is no longer
-flooded.*
+![](images/clipboard-2596357826.png){width="600"}
+
+### Some thoughts
+
+Overall, both studies highlight how versatile SAR is when it comes to environmental monitoring, whether it’s for detecting urban flooding or tracking changes in wetlands. Also, they both mention the reliability on SAR’s ability to provide consistent, high-resolution data, even in challenging conditions (like bad weather). Both approaches, in general, show how SAR can enhance monitoring and management of water related issues, but I would like to see which other case studios would also benefit from this imagery.
 
 ## **Reflections**
 
-This week was super interesting because SAR introduces a completely different way of analyzing Earth’s surface compared to optical imagery. Before coming to UCL, I hadn’t even heard of SAR, so it’s exciting to dive into something new and realize how useful it is.
+This week was super interesting because SAR introduces a completely different way of analyzing Earth’s surface compared to optical imagery. Before coming to UCL, I hadn’t even heard of SAR, so it’s exciting to dive into something new and realize how useful it is. Also, although I reviewed some SAR applications, both of them are related to water bodies, and I think it would be interesting to see what other type of applications have already used SAR data.
 
 One thing that stood out(also aligned with one of my reflections weeks ago) was how more complex models aren’t always better. Ollie’s study showed that deep learning, despite all the AI hype, wasn’t the best option for detecting building damage and that his statistical approach was actually more reliable. This made me think that the best option its actually to really understand what are all the possibilities each option bring us and evaluate which makes more sense for each case depending on the available data and expected outputs, and that at the end, choosing the right tool is more important than just picking the most advanced one.
 
-It was also great to try SAR in GEE and see how all these concepts translate into real world analysis. I quite liked the focus Ollie has on his practicals, using it to assess serious urban and social issues which makes me think that what we are learning can have a greater impact on society(something I have been trying to incorporate when deciding what to do for my dissertation as I am currently also about to present my dissertation proposal haha).
+It was also great to try SAR in GEE and see how all these concepts translate into real world analysis. I quite liked the focus Ollie has on his practicals, using it to assess serious urban and social issues which makes me think that what we are learning can have a greater impact on society(something I have been trying to incorporate when deciding what to do for my dissertation as I am currently also about to present my dissertation proposal).

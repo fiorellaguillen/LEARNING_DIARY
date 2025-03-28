@@ -62,7 +62,7 @@ This paper by [Siok et al.(2020)](https://www.mdpi.com/1424-8220/20/24/7100),
 
 *Image 3. On the left samples of the best high-spatial-images. On the right, samples of images in natural color composition after being enhanced with the best high-spatial-resolution image*
 
-![](images/clipboard-4145642814.png){width="252"}
+![](images/clipboard-4145642814.png){fig-align="center" width="370"}
 
 These corrections and enhancements are essential for making sure remote sensing data is accurate and actually useful. For example, atmospheric corrections are super important for environmental monitoring, where we need consistent multi-temporal comparisons. Geometric corrections are crucial for historical imagery alignment, especially in change detection studies. Radiometric calibration ensures that sensor data is comparable across time and space.
 
@@ -76,7 +76,7 @@ This paper by [Lu et al. (2014)](https://www.tandfonline.com/doi/full/10.1080/01
 
 *Image 4. Illustration done to summarise the main terms used in Remote Sensing*
 
-![](images/clipboard-1445595291.png)
+![](images/clipboard-1445595291.png){fig-align="center" width="370"}
 
 ## **Reflections**
 

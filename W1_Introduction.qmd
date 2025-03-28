@@ -27,7 +27,7 @@ This paper by [Howe et al (2022)](https://www.mdpi.com/2072-4292/14/20/5249) ana
 
 *Image 3:* *Maps of high-severity patch interior for the 2017 Meyers fire in southwestern Montana (A), and the 2018 Trail Mountain fire in central Utah (B) derived from Landsat (left column) and Sentinel (right column) imagery.*
 
-![](images/clipboard-3715828205.png){width="441"}
+![](images/clipboard-3715828205.png){fig-align="center" width="374"}
 
 ### Analysis of urban heat islands with Landsat satellite images and GIS in Kuala Lumpur Metropolitan City
 
@@ -35,7 +35,7 @@ While reviewing different papers I found it difficult to find one that when comp
 
 *Image 4:* *Flowchart of the process of obtaining the urban heat indexes, showing which bands where used.*
 
-![](images/clipboard-3526141123.png)
+![](images/clipboard-3526141123.png){fig-align="center" width="334"}
 
 After checking these two papers and also reviewing some others, I can tell that it's true that Sentinel 2 can be a great option(and very popular as well, maybe also because its newer?) because of its spatial and temporal resolution, for many types of applications that could be analysed with its available bands. But we can't generalize it as THE best option as, sometimes, like in the second paper, we might require some kind of information that only Landsat has, like in this case Thermal Infrared.
 
@@ -43,4 +43,4 @@ After checking these two papers and also reviewing some others, I can tell that 
 
 This week I learnt a lot of the foundations behind sensors which I actually didn't expected(I thought we would focus more directly on applications of satellite data) but I found interesting to get a grasp on what's actually going behind the images we see. Having an architecture background, I have previously used Satellite Images and I have "modified" them using programs like Photoshop and I had also the notion that images are just a combination of colors (like RGB), but I never expected to see that actually images are different layers of numbers that we can filter or modify to change what we see (now in hindsight, feels so obvious haha). Now I think I'll always see them in a whole new way!
 
-Now moving on to this weeks' entry topic I liked seeing the possibilities that each sensor has and also realizing that sometimes being newer or having better resolutions doesn't really make it the absolut BEST SENSOR. After the lecture I was certain that Sentinel had more advantages(more options for example) in terms of its various resolutions and uses. However, after reviewing literature and considering the pros and cons of each, I think Landsat is still highly relevant, especially to certain topics where they have bands that others don't, for example when it comes to analyzing heat, as seen on the second paper. Also, I was trying to think in which other cases it could be the best option and I realized that even though people are really into Sentinel also because it's relatively new, that might actually be a good reason not to use it. For example, if I were looking to analyze long-term trends, Landsat would probably be the best option as it will have a larger range(time wise) of data, which would help me compare changes over time more accurately. Overall, the main takeaway from this week's learning diary entry would be that there's not a single better sensor, and that choosing to use one will depend on the kind of research I want to do, so it's worth assessing first what kind of information we need and then see which sensor can helps us with what we need, and for that, looking for examples in previous research is a great tool.
+Now moving on to this weeks' entry topic, I think the main takeaway this week is that there’s no single "best" sensor and it all depends on what you’re researching. Before this lecture I would think that Sentinel is definitely better than Landsat because of its different resolutions and uses, but actually after checking some applications I realized Landsat is still super relevant and is now making me think for what other applications it may be better too (maybe long term analysis because Landsat has more time in the market?). Overall, now I know that before picking a sensor, it’s worth thinking about what kind of info I actually need and which sensor is more useful for that specific application, and for that, looking examples of previous research is a great tool!

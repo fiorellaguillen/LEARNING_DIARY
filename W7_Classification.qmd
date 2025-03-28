@@ -39,7 +39,7 @@ This week we explored machine learning techniques and reviewed some remote sensi
 
 **Overfitting:** When the model fits the training data too well that makes it useless for new data. In order to avoid it we have to check for *low bias* (difference between predicted value and true value) and *low variance* (difference in accuracy between train fit and test fit)
 
-![](images/clipboard-273935459.png)
+![](images/clipboard-273935459.png){fig-align="center" width="700"}
 
 **Train and test data:** we develop the model with train data and it doesnt see the test data. Then I use that model to predict other pixels including validating(test) pixels. With this comparison i can assess the accuracy(which we will learn more next week)
 
@@ -79,13 +79,13 @@ What stood out to me is how machine learning makes it possible to analyze and cl
 
 This paper by [Huay et al.(2016)](https://www.sciencedirect.com/science/article/pii/S235293851630129X)
 
-![](images/clipboard-4190448481.png)
+![](images/clipboard-4190448481.png){fig-align="center" width="572"}
 
 ### Mapping Informal Settlements in Developing Countries using Machine Learning and Low Resolution Multi-spectral Data
 
 This paper by [Gram-Hansen et al.(2019)](https://dl.acm.org/doi/pdf/10.1145/3306618.3314253)
 
-![](images/clipboard-987288024.png)
+![](images/clipboard-987288024.png){fig-align="center"}
 
 *Predictions of informal settlements (white pixels) in Kibera, Nairobi. Left: The CCF prediction of informal settlements
 in Kibera on low-resolution Sentinel-2 spectral imagery. Middle: Deep learning based prediction of informal settlements in

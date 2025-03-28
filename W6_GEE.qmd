@@ -9,7 +9,7 @@ This week, we finally started using Google Earth Engine (GEE), and honestly, it 
 
 One thing to mention is that GEE runs on JavaScript, which sounds intimidating at first, but so far, we’ve only used relatively simple commands, so it’s not that bad. I have summarized some of the main things to remember when using Javascript in GEE, in the following image:
 
-![](images/w6_javascript.png){width="400"}
+![](images/w6_javascript.png){fig-align="center" width="600"}
 
 Also, some words to keep in mind when working in GEE have been summarized here:
 
@@ -46,7 +46,7 @@ In the practical, we applied these concepts to the city of Delhi, but I also dec
 
 GEE’s massive satellite data catalog opens the door for a huge range of applications. We can do everything from climate studies to nighttime light analysis, with global coverage for most datasets. This is especially valuable for regions in the Global South, where detailed geospatial datasets are often lacking. With GEE, we can bypass that limitation and still conduct meaningful research and analysis.
 
-![](images/clipboard-2519461712.png){width="749"}
+![](images/clipboard-2519461712.png){fig-align="center" width="847"}
 
 [Source](https://developers.google.com/earth-engine/datasets/tags/agriculture)
 
@@ -68,7 +68,7 @@ There’s also the possibility of integrating GEE with machine learning models f
 
 This paper by [Tobón and Cañón (2019)](https://www.tandfonline.com/doi/full/10.1080/01431161.2020.1792575?needAccess=true#abstract)
 
-![](images/clipboard-2524360598.png){width="771"}
+![](images/clipboard-2524360598.png){fig-align="center" width="784"}
 
 *Figure 6. Example of methods for surface water delimitation in two river reaches: AWEI in (a) Landsat and (b) Sentinel; NDWI in (c) Landsat and (d) Sentinel; MNDWI in (e) Landsat and (f) Sentinel. The same quadrants used for Landsat and Sentinel*
 
